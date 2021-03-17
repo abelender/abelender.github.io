@@ -109,7 +109,7 @@ label {
 
 
 .paladin-holy {
-    background-image: url("./images/class/paladin/holy/paladin-holy.jpg");
+    background-image: url("/images/class/paladin/holy/paladin-holy.jpg");
     background-size:cover;
     background-repeat:   no-repeat;
     background-position: center center; 
@@ -117,14 +117,14 @@ label {
 
 
 .paladin-protection {
-    background-image: url("./images/class/paladin/protection/paladin-protection.jpg");
+    background-image: url("/images/class/paladin/protection/paladin-protection.jpg");
     background-size: cover;
     background-repeat:   no-repeat;
     background-position: center center; 
 }
 
 .paladin-retribution{
-    background-image: url("./images/class/paladin/retribution/paladin-retribution.jpg");
+    background-image: url("/images/class/paladin/retribution/paladin-retribution.jpg");
     background-size: cover;
     background-repeat:   no-repeat;
     background-position: center center; 
