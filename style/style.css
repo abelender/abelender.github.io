@@ -27,7 +27,6 @@
 .header-image{
     width: inherit;
     height: inherit;
-    /* opacity: 0.5; */
     border-right: inherit;
 }
 
@@ -48,7 +47,7 @@ div.talent-tree-header span {
     align-items: center;
     border: 8px solid black;
     margin: 8px;
-    border-style: inset;
+    border-style:solid;
     border-image-repeat: round;
     border-radius: 1%;
     border-width: 3px;
