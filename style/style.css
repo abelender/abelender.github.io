@@ -90,7 +90,7 @@ body {
     background-color: #4f3130;
 }
 
-label {
+/* label {
     position: absolute;
     right: -2px;
     bottom: -3px;
@@ -103,6 +103,20 @@ label {
     z-index: 1;
     font-family: MedievalSharp, monospace;
 
+} */
+
+.icon-span {
+    position: absolute;
+    right: -2px;
+    bottom: -3px;
+    background: black;
+    font-size: 10px;
+    color:white;
+    padding: 0 2px;
+    border: 1px solid black;
+    border-radius: 2px;
+    z-index: 1;
+    font-family: MedievalSharp, monospace;
 }
 
 
