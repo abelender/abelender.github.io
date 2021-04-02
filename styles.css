@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+
+body {
+    background-color: grey;
+}
+
+.class-icon-wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.class-icon {
+    display: flex;
+    flex-direction: column;
+
+    margin: 4px;
+}
+
+.span-navbar {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: black;
+    margin-left: 10px;
+    text-shadow: 0 0 9px rgb(207, 192, 192);
+    font-family: MedievalSharp, monospace;
+}
+
+.class-icon-img {
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 36px;
+    height: 36px;
+    border:2px solid black;
+    border-radius: 0.2em;
+}
+
+.talent-tree-wrapper {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.talent-tree-header {
+    border-bottom: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    padding-bottom: 5px;
+    align-items: center;
+
+}
+
+.img-header-icon {
+    border: 2px solid black;
+    border-radius: 0.5em;
+}
+
+.span-header {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: black;
+    margin-left: 10px;
+    text-shadow: 0 0 9px rgb(207, 192, 192);
+    font-family: MedievalSharp, monospace;
+}
+
+.talent-tree {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    margin: 10px;
+    position: relative;
+    padding: 5px;
+}
+
+.talent-tree-background {
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    filter: sepia(90%) blur(0.8px) opacity(80%);
+    top: 0px;
+    left: 0px;
+
+}
+
+.talent-line {
+    display: flex;
+    flex-direction: row;
+}
+
+.talent-div {
+    background-color: transparent;
+    margin: 5px;
+    width: 36px;
+    height: 36px;
+    border-radius: 0.2em;
+
+}
+
+.talent-img {
+    width: 36px;
+    height: 36px;
+    border:2px solid black;
+    border-radius: 0.2em;
+
+}
