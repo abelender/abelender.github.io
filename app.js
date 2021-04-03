@@ -1,4 +1,6 @@
 
+
+
 classIconNavBuilder(classIcons);
 
 
@@ -27,6 +29,3 @@ talentTreeBuilder(paladinretribution,
                  'https://legacy-wow.com/images/default/paladin.jpg', 
                  'Retribution', 
                  'https://wow.zamimg.com/images/wow/icons/large/spell_holy_auraoflight.jpg');
-
-
-

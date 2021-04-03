@@ -2,7 +2,10 @@
 
 
 body {
-    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #4e3d42;
 }
 
 .class-icon-wrapper{
@@ -21,7 +24,6 @@ body {
     font-size: 1.1em;
     font-weight: 700;
     color: black;
-    margin-left: 10px;
     text-shadow: 0 0 9px rgb(207, 192, 192);
     font-family: MedievalSharp, monospace;
 }
@@ -33,13 +35,12 @@ body {
     width: 36px;
     height: 36px;
     border:2px solid black;
-    border-radius: 0.2em;
+    border-radius: 0.8em;
 }
 
 .talent-tree-wrapper {
     display: flex;
     flex-direction: row;
-
 }
 
 .talent-tree-header {
@@ -49,7 +50,6 @@ body {
     margin: 5px;
     padding-bottom: 5px;
     align-items: center;
-
 }
 
 .img-header-icon {
@@ -99,7 +99,12 @@ body {
     width: 36px;
     height: 36px;
     border-radius: 0.2em;
+    transform: perspective(40px) rotateX(5deg);
+}
 
+.talent-div:active {
+    position: relative;
+    top: 3px;
 }
 
 .talent-img {
