@@ -1,5 +1,6 @@
 function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
 
+    
     let divTalentTreeHeader = document.createElement('div');
         divTalentTreeHeader.className = 'talent-tree-header';
 
@@ -35,6 +36,9 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
         
         let div = document.createElement('div');
             div.className = 'talent-div';
+
+        let span = document.createElement('span');
+            span.className = 'talent-span';
     
         
         if(specobject[prop].name !== undefined) {
@@ -43,7 +47,9 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
             img.src = specobject[prop].src;
             img.className = 'talent-img'
             div.appendChild(img);
-    
+
+            span.textContent = `${specobject[prop].pointSpent}/${specobject[prop].pointLimit}`;
+            div.appendChild(span);
         }
     
         divTalentLine.appendChild(div);

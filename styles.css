@@ -95,11 +95,24 @@ body {
 
 .talent-div {
     background-color: transparent;
-    margin: 5px;
+    margin: 8px;
     width: 36px;
     height: 36px;
     border-radius: 0.2em;
     transform: perspective(40px) rotateX(5deg);
+}
+
+.talent-span {
+    color: white;
+    background-color: black;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-size: smaller;
+    border-radius: 0.2em;
+    position: absolute;
+    bottom: -30%;
+    right: -30%;
+
 }
 
 .talent-div:active {
