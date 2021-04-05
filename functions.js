@@ -36,6 +36,7 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
         
         let div = document.createElement('div');
             div.className = 'talent-div';
+            div.oncontextmenu = function () {return false;};
 
         let span = document.createElement('span');
             span.className = 'talent-span';
