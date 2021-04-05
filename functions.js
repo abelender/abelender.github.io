@@ -36,7 +36,6 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
         
         let div = document.createElement('div');
             div.className = 'talent-div';
-            div.oncontextmenu = function () {return false;};
 
         let span = document.createElement('span');
             span.className = 'talent-span';
@@ -51,6 +50,13 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
 
             span.textContent = `${specobject[prop].pointSpent}/${specobject[prop].pointLimit}`;
             div.appendChild(span);
+
+            div.addEventListener('click', function(ev) { 
+                addLimitPoint(ev, span, specobject, prop);}, false);
+
+            div.addEventListener('contextmenu', function(ev) { 
+                subLimitPoint(ev, span, specobject, prop);}, false);
+
         }
     
         divTalentLine.appendChild(div);
@@ -92,6 +98,34 @@ function classIconNavBuilder (classicon) {
     
         
         document.body.appendChild(divClassIconWrapper);
+    }
+
+    function addLimitPoint(ev, span, specobject, prop) {
+
+        
+        if(specobject[prop].pointSpent < specobject[prop].pointLimit) {
+             span.textContent = `${specobject[prop].pointSpent += 1}/${specobject[prop].pointLimit}`;
+        }
+       
+        ev.preventDefault();
+    
+ 
+        return false;
+    
+    }
+
+    function subLimitPoint(ev, span, specobject, prop) {
+
+        
+        if(specobject[prop].pointSpent > 0) {
+             span.textContent = `${specobject[prop].pointSpent -= 1}/${specobject[prop].pointLimit}`;
+        }
+       
+        ev.preventDefault();
+    
+ 
+        return false;
+    
     }
 
 
