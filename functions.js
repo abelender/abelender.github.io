@@ -11,6 +11,17 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
     let spanHeader = document.createElement('span');
         spanHeader.className = 'span-header';
         spanHeader.textContent = `${spec}`;
+
+    let divPoints = document.createElement('div');
+        divPoints.className = 'div-points';
+        
+    let spanPoints = document.createElement('span');
+        spanPoints.textContent = '0';
+
+    let imgDelPoints = document.createElement('img');
+        imgDelPoints.className = 'img-del-points';
+        imgDelPoints.src = 'https://www.warcrafttavern.com/tbc/tools/talent-calculator/img/cancel.c8c41884.svg';
+
     
     let divTalentTree = document.createElement('div');
         divTalentTree.className = 'talent-tree';
@@ -23,7 +34,14 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
 
     divTalentTreeHeader.appendChild(imgHeaderIcon);
     divTalentTreeHeader.appendChild(spanHeader);
+
+    divPoints.appendChild(spanPoints);
+    divPoints.appendChild(imgDelPoints);
+
+    divTalentTreeHeader.appendChild(divPoints);
+
     divTalentTree.appendChild(divTalentTreeHeader);
+    
 
 
     for(let prop in specobject){
@@ -52,10 +70,10 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
             div.appendChild(span);
 
             div.addEventListener('click', function(ev) { 
-                addLimitPoint(ev, span, specobject, prop);}, false);
+                addTalentPoint(ev, span, specobject, prop);}, false);
 
             div.addEventListener('contextmenu', function(ev) { 
-                subLimitPoint(ev, span, specobject, prop);}, false);
+                subTalentPoint(ev, span, specobject, prop);}, false);
 
         }
     
@@ -100,32 +118,34 @@ function classIconNavBuilder (classicon) {
         document.body.appendChild(divClassIconWrapper);
     }
 
-    function addLimitPoint(ev, span, specobject, prop) {
+function addTalentPoint(ev, span, specobject, prop) {
 
         
-        if(specobject[prop].pointSpent < specobject[prop].pointLimit) {
-             span.textContent = `${specobject[prop].pointSpent += 1}/${specobject[prop].pointLimit}`;
-        }
-       
-        ev.preventDefault();
-    
- 
-        return false;
-    
+    if(specobject[prop].pointSpent < specobject[prop].pointLimit) {
+            span.textContent = `${specobject[prop].pointSpent += 1}/${specobject[prop].pointLimit}`;
     }
-
-    function subLimitPoint(ev, span, specobject, prop) {
-
-        
-        if(specobject[prop].pointSpent > 0) {
-             span.textContent = `${specobject[prop].pointSpent -= 1}/${specobject[prop].pointLimit}`;
-        }
-       
-        ev.preventDefault();
     
- 
-        return false;
+    ev.preventDefault();
+
+
+    return false;
+
+}
+
+function subTalentPoint(ev, span, specobject, prop) {
+
     
+    if(specobject[prop].pointSpent > 0) {
+            span.textContent = `${specobject[prop].pointSpent -= 1}/${specobject[prop].pointLimit}`;
     }
+    
+    ev.preventDefault();
+
+
+    return false;
+
+}
+
+
 
 

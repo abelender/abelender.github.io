@@ -28,6 +28,26 @@ body {
     font-family: MedievalSharp, monospace;
 }
 
+.div-points {
+    border: 1px solid black;
+    border-radius: 0.5em;
+    font-family: MedievalSharp, monospace;
+    padding: 2px;
+    position:absolute; right: 10px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.img-del-points {
+    width: 15px;
+    height: 15px;
+    margin-left: 3px;
+}
+
 .class-icon-img {
 
     margin-left: auto;
