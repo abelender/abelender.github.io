@@ -14,9 +14,9 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
 
     let divPoints = document.createElement('div');
         divPoints.className = 'div-points';
-        
+
     let spanPoints = document.createElement('span');
-        spanPoints.textContent = '0';
+        spanPoints.textContent = `${0}`;
 
     let imgDelPoints = document.createElement('img');
         imgDelPoints.className = 'img-del-points';
@@ -70,10 +70,10 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
             div.appendChild(span);
 
             div.addEventListener('click', function(ev) { 
-                addTalentPoint(ev, span, specobject, prop);}, false);
+                addTalentPoint(ev, span, specobject, prop, spanPoints);}, false);
 
             div.addEventListener('contextmenu', function(ev) { 
-                subTalentPoint(ev, span, specobject, prop);}, false);
+                subTalentPoint(ev, span, specobject, prop, spanPoints);}, false);
 
         }
     
@@ -118,11 +118,12 @@ function classIconNavBuilder (classicon) {
         document.body.appendChild(divClassIconWrapper);
     }
 
-function addTalentPoint(ev, span, specobject, prop) {
+function addTalentPoint(ev, span, specobject, prop, spanPoints) {
 
         
     if(specobject[prop].pointSpent < specobject[prop].pointLimit) {
             span.textContent = `${specobject[prop].pointSpent += 1}/${specobject[prop].pointLimit}`;
+            spanPoints.textContent = `${parseInt(spanPoints.textContent) + 1}`;
     }
     
     ev.preventDefault();
@@ -132,11 +133,12 @@ function addTalentPoint(ev, span, specobject, prop) {
 
 }
 
-function subTalentPoint(ev, span, specobject, prop) {
+function subTalentPoint(ev, span, specobject, prop, spanPoints) {
 
     
     if(specobject[prop].pointSpent > 0) {
             span.textContent = `${specobject[prop].pointSpent -= 1}/${specobject[prop].pointLimit}`;
+            spanPoints.textContent = `${parseInt(spanPoints.textContent) - 1}`;
     }
     
     ev.preventDefault();
