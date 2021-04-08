@@ -31,7 +31,7 @@ body {
 .div-points {
     border: 1px solid black;
     border-radius: 0.5em;
-    font-family: MedievalSharp, monospace;
+    /* font-family: MedievalSharp, monospace; */
     padding: 2px;
     position:absolute; right: 10px;
     background-color: black;
@@ -39,6 +39,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+}
+
+.span-del-point {
+    font-family: MedievalSharp, monospace;
 
 }
 

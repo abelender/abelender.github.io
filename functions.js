@@ -1,5 +1,4 @@
 function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
-
     
     let divTalentTreeHeader = document.createElement('div');
         divTalentTreeHeader.className = 'talent-tree-header';
@@ -16,6 +15,7 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
         divPoints.className = 'div-points';
 
     let spanPoints = document.createElement('span');
+        spanPoints.className = 'span-del-point';
         spanPoints.textContent = `${0}`;
 
     let imgDelPoints = document.createElement('img');
@@ -118,25 +118,26 @@ function classIconNavBuilder (classicon) {
     
         
         document.body.appendChild(divClassIconWrapper);
-    }
+}
 
 function addTalentPoint(ev, span, specobject, prop, spanPoints) {
 
-        
-    if(specobject[prop].pointSpent < specobject[prop].pointLimit) {
+    
+    if(specobject[prop].pointSpent < specobject[prop].pointLimit && isTalentIconsEnable()) {
             span.textContent = `${specobject[prop].pointSpent += 1}/${specobject[prop].pointLimit}`;
             spanPoints.textContent = `${parseInt(spanPoints.textContent) + 1}`;
     }
     
     ev.preventDefault();
 
+    isTalentIconsEnable();
+    
 
     return false;
 
 }
 
 function subTalentPoint(ev, span, specobject, prop, spanPoints) {
-
     
     if(specobject[prop].pointSpent > 0) {
             span.textContent = `${specobject[prop].pointSpent -= 1}/${specobject[prop].pointLimit}`;
@@ -167,6 +168,25 @@ function resetTalentTree (ev, specobject, spanPoints, divTalentTree) {
 
     ev.preventDefault();
     return false;
+}
+
+function isTalentIconsEnable () {
+
+    let divTotalPoints = 0;
+    let isEnable = true;
+
+    for(let i = 0; i < divTalentTreeWrapper.getElementsByClassName('span-del-point').length; i++) {
+        
+        divTotalPoints += parseInt(divTalentTreeWrapper.getElementsByClassName('span-del-point')[i].textContent);
+
+    }
+
+    if(divTotalPoints >= 61) {
+        isEnable = false;
+    }
+    
+    return isEnable;
+
 }
 
 
