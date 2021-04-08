@@ -22,7 +22,6 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
         imgDelPoints.className = 'img-del-points';
         imgDelPoints.src = 'https://www.warcrafttavern.com/tbc/tools/talent-calculator/img/cancel.c8c41884.svg';
 
-    
     let divTalentTree = document.createElement('div');
         divTalentTree.className = 'talent-tree';
 
@@ -86,6 +85,9 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
     divTalentTree.appendChild(divTalentTreeBG);
     divTalentTreeWrapper.appendChild(divTalentTree);
 
+    imgDelPoints.addEventListener('click', function(ev) { 
+        resetTalentTree(ev, specobject, spanPoints, divTalentTree);}, false);
+
 }
 
 function classIconNavBuilder (classicon) {
@@ -143,9 +145,28 @@ function subTalentPoint(ev, span, specobject, prop, spanPoints) {
     
     ev.preventDefault();
 
-
     return false;
 
+}
+
+function resetTalentTree (ev, specobject, spanPoints, divTalentTree) {
+
+    spanPoints.textContent = `${0}`;
+    let control = 0;
+
+    for(let prop in specobject){
+
+        if(specobject[prop].name !== undefined) {
+
+            specobject[prop].pointSpent = 0;
+            divTalentTree.getElementsByClassName('talent-span')[control].textContent = `${specobject[prop].pointSpent}/${specobject[prop].pointLimit}`; 
+            control += 1;
+
+        }
+    }
+
+    ev.preventDefault();
+    return false;
 }
 
 
