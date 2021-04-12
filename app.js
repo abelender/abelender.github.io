@@ -12,7 +12,6 @@ document.body.appendChild(divTalentTreeWrapper);
 
 
 
-
 talentTreeBuilder(paladinHoly, 
                  'https://wallpapercave.com/wp/wp3449930.jpg', 
                  'Holy', 

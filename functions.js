@@ -1,3 +1,6 @@
+let globalTalentLimit = 1;
+
+
 function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
     
     let divTalentTreeHeader = document.createElement('div');
@@ -69,10 +72,10 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
             div.appendChild(span);
 
             div.addEventListener('click', function(ev) { 
-                addTalentPoint(ev, span, specobject, prop, spanPoints);}, false);
+                addTalentPoint(ev, span, specobject, prop, spanPoints, divTalentTree);}, false);
 
             div.addEventListener('contextmenu', function(ev) { 
-                subTalentPoint(ev, span, specobject, prop, spanPoints);}, false);
+                subTalentPoint(ev, span, specobject, prop, spanPoints, divTalentTree);}, false);
 
         }
     
@@ -116,37 +119,41 @@ function classIconNavBuilder (classicon) {
 
         }
     
-        
         document.body.appendChild(divClassIconWrapper);
 }
 
-function addTalentPoint(ev, span, specobject, prop, spanPoints) {
+function addTalentPoint(ev, span, specobject, prop, spanPoints, divTalentTree) {
 
-    
-    if(specobject[prop].pointSpent < specobject[prop].pointLimit && isTalentIconsEnable()) {
+    if(specobject[prop].pointSpent < specobject[prop].pointLimit && specobject[prop].isEnable == true && globalTalentLimit <= 61) {
+
             span.textContent = `${specobject[prop].pointSpent += 1}/${specobject[prop].pointLimit}`;
             spanPoints.textContent = `${parseInt(spanPoints.textContent) + 1}`;
+
+            checkForEnable(specobject, spanPoints);
+            globalTalentLimit++;
+
     }
     
-    ev.preventDefault();
-
-    isTalentIconsEnable();
-    
+    ev.preventDefault();    
 
     return false;
 
 }
 
-function subTalentPoint(ev, span, specobject, prop, spanPoints) {
+function subTalentPoint(ev, span, specobject, prop, spanPoints, divTalentTree) {
     
     if(specobject[prop].pointSpent > 0) {
             span.textContent = `${specobject[prop].pointSpent -= 1}/${specobject[prop].pointLimit}`;
             spanPoints.textContent = `${parseInt(spanPoints.textContent) - 1}`;
+
+            checkForEnable (specobject, spanPoints);
+            globalTalentLimit--;
+            
     }
     
-    ev.preventDefault();
+    ev.preventDefault(-1);
 
-    return false;
+    return false;  
 
 }
 
@@ -170,25 +177,52 @@ function resetTalentTree (ev, specobject, spanPoints, divTalentTree) {
     return false;
 }
 
-function isTalentIconsEnable () {
+function checkForEnable (specobject, spanPoints) {
 
-    let divTotalPoints = 0;
-    let isEnable = true;
-
-    for(let i = 0; i < divTalentTreeWrapper.getElementsByClassName('span-del-point').length; i++) {
-        
-        divTotalPoints += parseInt(divTalentTreeWrapper.getElementsByClassName('span-del-point')[i].textContent);
-
-    }
-
-    if(divTotalPoints >= 61) {
-        isEnable = false;
-    }
+    let isLineFive = [undefined, false, false, false, false, false, false, false, false, false];
+    let isLineEnable = [undefined, true, false, false, false, false, false, false, false, false];
+    let lineSum = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    let row = 1;
     
-    return isEnable;
+    while(row < 10){
+        for(let prop in specobject){
 
+            if(specobject[prop].name !== undefined && specobject[prop].lineNumber === row ){
+                lineSum[row] += specobject[prop].pointSpent;
+            }
+        
+
+            if(lineSum[row] >= 5) {
+                isLineFive[row] = true;
+            } else {
+                isLineFive[row] = false;
+            }
+
+            if(isLineFive[row] === true) {
+                isLineEnable[row + 1] = true;
+            } else {
+                isLineEnable[row + 1] = false;
+            }
+
+        }
+
+        for(let prop in specobject) {
+            if(specobject[prop].lineNumber === row + 1) {
+                if(isLineEnable[row + 1] === true) {
+                    specobject[prop].isEnable = true;
+                } else {
+                    specobject[prop].isEnable = false;
+                    specobject[prop].pointSpent = 0;
+                }              
+            }
+        }
+        row++;
+    }
+
+    for(i = 1; i <= 9; i++) {
+        lineSum[0] += lineSum[i];
+    }
+
+    spanPoints.textContent = parseInt(lineSum[0]);         
 }
-
-
-
 
