@@ -65,7 +65,13 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
         
             let img = document.createElement('img');
             img.src = specobject[prop].src;
-            img.className = 'talent-img'
+
+            if(prop < 4) {
+                img.className = 'talent-img'
+            } else {
+                img.className = 'talent-img talent-img-disable'
+            }
+
             div.appendChild(img);
 
             span.textContent = `${specobject[prop].pointSpent}/${specobject[prop].pointLimit}`;
@@ -122,14 +128,14 @@ function classIconNavBuilder (classicon) {
         document.body.appendChild(divClassIconWrapper);
 }
 
-function addTalentPoint(ev, span, specobject, prop, spanPoints, divTalentTree) {
-
+function addTalentPoint(ev, span, specobject, prop, spanPoints, divTalentTree) {    
+        
     if(specobject[prop].pointSpent < specobject[prop].pointLimit && specobject[prop].isEnable == true && globalTalentLimit <= 61) {
 
             span.textContent = `${specobject[prop].pointSpent += 1}/${specobject[prop].pointLimit}`;
             spanPoints.textContent = `${parseInt(spanPoints.textContent) + 1}`;
 
-            checkForEnable(specobject, spanPoints);
+            checkForEnable(specobject, spanPoints, divTalentTree);
             globalTalentLimit++;
 
     }
@@ -146,7 +152,7 @@ function subTalentPoint(ev, span, specobject, prop, spanPoints, divTalentTree) {
             span.textContent = `${specobject[prop].pointSpent -= 1}/${specobject[prop].pointLimit}`;
             spanPoints.textContent = `${parseInt(spanPoints.textContent) - 1}`;
 
-            checkForEnable (specobject, spanPoints);
+            checkForEnable (specobject, spanPoints, divTalentTree);
             globalTalentLimit--;
             
     }
@@ -177,7 +183,7 @@ function resetTalentTree (ev, specobject, spanPoints, divTalentTree) {
     return false;
 }
 
-function checkForEnable (specobject, spanPoints) {
+function checkForEnable (specobject, spanPoints, divTalentTree) {
 
     let isLineFive = [undefined, false, false, false, false, false, false, false, false, false];
     let isLineEnable = [undefined, true, false, false, false, false, false, false, false, false];
@@ -214,15 +220,55 @@ function checkForEnable (specobject, spanPoints) {
                     specobject[prop].isEnable = false;
                     specobject[prop].pointSpent = 0;
                 }              
-            }
+            }            
         }
+
+
+
         row++;
+    }
+
+    let control = 0;
+    let talentImages = divTalentTree.getElementsByClassName('talent-img');
+
+
+    console.clear();
+    
+    for(let prop in specobject){
+
+        if(specobject[prop].name !== undefined) {
+
+            console.log(control);
+        
+            // console.log(talentImages[control]);
+            // console.log(specobject[prop].name);
+
+
+            if(specobject[prop].isEnable === true) {
+                    talentImages[control].className = "talent-img";
+                    // console.log(specobject[prop].isEnable);
+                    // console.log(specobject[prop].name);
+                   
+            } 
+
+            if(specobject[prop].isEnable === false) {
+                    talentImages[control].className = "talent-img talent-img-disable";
+                    // console.log(specobject[prop].isEnable);
+                    // console.log(specobject[prop].name);
+
+                    
+            }
+            control += 1;
+        }
     }
 
     for(i = 1; i <= 9; i++) {
         lineSum[0] += lineSum[i];
     }
 
-    spanPoints.textContent = parseInt(lineSum[0]);         
+
+    spanPoints.textContent = parseInt(lineSum[0]);
+
+
 }
 
