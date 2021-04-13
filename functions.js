@@ -230,6 +230,8 @@ function checkForEnable (specobject, spanPoints, divTalentTree) {
 
     let control = 0;
     let talentImages = divTalentTree.getElementsByClassName('talent-img');
+    let talentSpan = divTalentTree.getElementsByClassName('talent-span');
+
 
 
     console.clear();
@@ -239,24 +241,14 @@ function checkForEnable (specobject, spanPoints, divTalentTree) {
         if(specobject[prop].name !== undefined) {
 
             console.log(control);
-        
-            // console.log(talentImages[control]);
-            // console.log(specobject[prop].name);
-
 
             if(specobject[prop].isEnable === true) {
                     talentImages[control].className = "talent-img";
-                    // console.log(specobject[prop].isEnable);
-                    // console.log(specobject[prop].name);
-                   
             } 
 
             if(specobject[prop].isEnable === false) {
                     talentImages[control].className = "talent-img talent-img-disable";
-                    // console.log(specobject[prop].isEnable);
-                    // console.log(specobject[prop].name);
-
-                    
+                    talentSpan[control].textContent = `${specobject[prop].pointSpent}/${specobject[prop].pointLimit}`;
             }
             control += 1;
         }
