@@ -1,8 +1,5 @@
-
-
-
 classIconNavBuilder(classIcons);
-
+globalSpanPoints();
 
 let divTalentTreeWrapper = document.createElement('div');
     divTalentTreeWrapper.className = 'talent-tree-wrapper';

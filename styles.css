@@ -28,6 +28,30 @@ body {
     font-family: MedievalSharp, monospace;
 }
 
+.global-span-points-wrapper {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.9em;
+    font-weight: 700;
+    font-family: MedievalSharp, monospace;
+    border: 2px solid black;
+    border-radius: 0.5em;
+    padding: 4px;
+    background-color: black;
+    color: #ddbea9;
+
+
+}
+
+.label-global-span-points {
+
+}
+
+.span-global-span-points {
+    margin-left: 3px;
+
+}
+
 .div-points {
     border: 1px solid black;
     border-radius: 0.5em;

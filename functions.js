@@ -128,6 +128,33 @@ function classIconNavBuilder (classicon) {
         document.body.appendChild(divClassIconWrapper);
 }
 
+function globalSpanPoints() {
+
+    let divGlobalSpanPointsWrapper = document.createElement('div');
+        divGlobalSpanPointsWrapper.className = 'global-span-points-wrapper';
+
+    let labelGlobalSpanPoints = document.createElement('label');
+        labelGlobalSpanPoints.className = 'label-global-span-points';
+        labelGlobalSpanPoints.innerHTML = "Points Left: ";
+        divGlobalSpanPointsWrapper.appendChild(labelGlobalSpanPoints);
+    
+    let spanGlobalSpanPoints = document.createElement('span');
+        spanGlobalSpanPoints.className = 'span-global-span-points';
+        spanGlobalSpanPoints.id = 'spanglobalpoints';
+        spanGlobalSpanPoints.textContent = `${61 - globalTalentLimit}`;
+        divGlobalSpanPointsWrapper.appendChild(spanGlobalSpanPoints);
+  
+
+        document.body.appendChild(divGlobalSpanPointsWrapper);
+
+}
+
+function updateGlobalSpanPoints () {
+
+    document.getElementById('spanglobalpoints').textContent = `${61 - globalTalentLimit}`;
+
+}
+
 function addTalentPoint(ev, span, specobject, prop, spanPoints, divTalentTree) {    
         
     if(specobject[prop].pointSpent < specobject[prop].pointLimit && specobject[prop].isEnable == true && globalTalentLimit <= 60) {
@@ -137,6 +164,8 @@ function addTalentPoint(ev, span, specobject, prop, spanPoints, divTalentTree) {
 
             checkForEnable(specobject, spanPoints, divTalentTree);
             globalTalentLimit++;
+            updateGlobalSpanPoints();
+
 
     }
     
@@ -154,6 +183,8 @@ function subTalentPoint(ev, span, specobject, prop, spanPoints, divTalentTree) {
 
             checkForEnable (specobject, spanPoints, divTalentTree);
             globalTalentLimit--;
+            updateGlobalSpanPoints();
+
             
     }
     
@@ -189,7 +220,7 @@ function resetTalentTree (ev, specobject, spanPoints, divTalentTree) {
         
     }
 
-    console.log(globalTalentLimit);
+    updateGlobalSpanPoints();
 
     ev.preventDefault();
     return false;
