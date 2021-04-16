@@ -198,19 +198,27 @@ body {
     display: none;
     position: absolute;
     bottom: 40px;
-    right: 40px;
+    right: -40px;
     background-color: black;
     z-index: -1;
     height: fit-content;
-    width: 280px;
+    width: 350px;
     border-radius: 0.2em;   
     padding: 4px;
     opacity: 0.8;
     font-size: 14px;
 }
 
-.span-talent-info {
+.span-talent-name {
     color: white;
     font-family: UbuntuMono, monospace;
+    text-align: left;
     
+}
+
+.span-talent-rank {
+    color: gray;
+    font-family: UbuntuMono, monospace;
+    float: right;
+
 }
