@@ -202,4 +202,11 @@ body {
     height: 60px;
     width: 200px;
     border-radius: 0.2em;   
+    padding: 4px;
+    opacity: 0.8;
+}
+
+.span-talent-info {
+    color: white;
+    
 }

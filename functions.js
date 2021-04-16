@@ -89,19 +89,23 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
             div.addEventListener('contextmenu', function(ev) { 
                 subTalentPoint(ev, span, specobject, prop, spanPoints, divTalentTree);}, false);
 
+            let spanName = document.createElement('span');
+                spanName.className = 'span-talent-info';
+
+            divDisplay.appendChild(spanName);
+
+
             div.addEventListener("mouseover", function() {
                 divDisplay.style.display = "block";
                 div.style.transform = "none";
                 img.style.borderColor = 'rgb(228, 252, 13)';
-                console.log('dentro');
+                divTalentInfo(specobject, prop, spanName);
             });
 
             div.addEventListener("mouseout", function() {
                 divDisplay.style.display = "none";
                 div.style.transform = 'perspective(40px) rotateX(5deg)';
                 img.style.borderColor = 'black';
-
-                console.log('fuera');
             });
 
         }
@@ -320,6 +324,13 @@ function checkForEnable (specobject, spanPoints, divTalentTree) {
 
 
     spanPoints.textContent = parseInt(lineSum[0]);
+
+}
+
+function divTalentInfo (specobject, prop, spanName) {
+
+        spanName.textContent = specobject[prop].name;
+
 
 }
 
