@@ -34,13 +34,11 @@ body {
     font-size: 0.9em;
     font-weight: 700;
     font-family: MedievalSharp, monospace;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 0.5em;
     padding: 4px;
     background-color: black;
-    color: #ddbea9;
-
-
+    color: white;
 }
 
 /* .label-global-span-points {
@@ -89,6 +87,7 @@ body {
 .talent-tree-wrapper {
     display: flex;
     flex-direction: row;
+    /* z-index: 1; */
 }
 
 .talent-tree-header {
@@ -98,6 +97,8 @@ body {
     margin: 5px;
     padding-bottom: 5px;
     align-items: center;
+    z-index: 4;
+
 }
 
 .img-header-icon {
@@ -117,16 +118,17 @@ body {
 .talent-tree {
     display: flex;
     flex-direction: column;
-    border: 2px solid black;
+    border: 3px solid black;
     margin: 10px;
     position: relative;
     padding: 5px;
+    /* z-index: 3; */
 }
 
 .talent-tree-background {
     background-size: cover;
     background-position: center;
-    z-index: -1;
+    z-index: -2;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -139,15 +141,19 @@ body {
 .talent-line {
     display: flex;
     flex-direction: row;
+    position: relative;
 }
 
 .talent-div {
+    position: relative;
     background-color: transparent;
     margin: 8px;
     width: 36px;
     height: 36px;
     border-radius: 0.2em;
     transform: perspective(40px) rotateX(5deg);
+    z-index: 4;
+
 }
 
 .talent-span {
@@ -183,4 +189,17 @@ body {
     border-radius: 0.2em;
     filter: grayscale(100%);
 
+}
+
+.info-div-to-display {
+    transform: none;
+    display: none;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    background-color: black;
+    z-index: -1;
+    height: 60px;
+    width: 200px;
+    border-radius: 0.2em;   
 }

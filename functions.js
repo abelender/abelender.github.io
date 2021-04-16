@@ -59,6 +59,9 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
 
         let span = document.createElement('span');
             span.className = 'talent-span';
+
+        let divDisplay = document.createElement('div');
+            divDisplay.className = 'info-div-to-display';
     
         
         if(specobject[prop].name !== undefined) {
@@ -75,13 +78,31 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
             div.appendChild(img);
 
             span.textContent = `${specobject[prop].pointSpent}/${specobject[prop].pointLimit}`;
+
             div.appendChild(span);
+
+            div.appendChild(divDisplay);
 
             div.addEventListener('click', function(ev) { 
                 addTalentPoint(ev, span, specobject, prop, spanPoints, divTalentTree);}, false);
 
             div.addEventListener('contextmenu', function(ev) { 
                 subTalentPoint(ev, span, specobject, prop, spanPoints, divTalentTree);}, false);
+
+            div.addEventListener("mouseover", function() {
+                divDisplay.style.display = "block";
+                div.style.transform = "none";
+                img.style.borderColor = 'rgb(228, 252, 13)';
+                console.log('dentro');
+            });
+
+            div.addEventListener("mouseout", function() {
+                divDisplay.style.display = "none";
+                div.style.transform = 'perspective(40px) rotateX(5deg)';
+                img.style.borderColor = 'black';
+
+                console.log('fuera');
+            });
 
         }
     
