@@ -89,13 +89,16 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
             let spanRank = document.createElement('span');
                 spanRank.className = 'span-talent-rank';
 
+            let spanText = document.createElement('span');
+                spanText.className = 'span-talent-text';
+
           
 
             div.addEventListener('click', function(ev) { 
                 addTalentPoint(ev, span, specobject, prop, spanPoints, divTalentTree);}, false);
 
             div.addEventListener('click', function(ev) { 
-                divTalentInfo(specobject, prop, spanName, spanRank);}, false);
+                divTalentInfo(specobject, prop, spanName, spanRank, spanText);}, false);
 
             div.addEventListener('contextmenu', function(ev) { 
                 subTalentPoint(ev, span, specobject, prop, spanPoints, divTalentTree);}, false);
@@ -104,7 +107,7 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
                 divDisplay.style.display = "block";
                 div.style.transform = "none";
                 img.style.borderColor = 'rgb(228, 252, 13)';
-                divTalentInfo(specobject, prop, spanName, spanRank);
+                divTalentInfo(specobject, prop, spanName, spanRank, spanText);
             });
 
             div.addEventListener("mouseout", function() {
@@ -115,6 +118,7 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
 
             divDisplay.appendChild(spanName);
             divDisplay.appendChild(spanRank);
+            divDisplay.appendChild(spanText);
 
         }
     
@@ -335,12 +339,16 @@ function checkForEnable (specobject, spanPoints, divTalentTree) {
 
 }
 
-function divTalentInfo (specobject, prop, spanName, spanRank) {
-            
+function divTalentInfo (specobject, prop, spanName, spanRank, spanText) {
+           
+    
+    console.log(spanText.textContent = specobject[prop].rankText["1"]);
+
     if(specobject[prop].pointSpent == 0) {
     
         spanName.textContent = specobject[prop].name;
         spanRank.textContent = `Rank ${specobject[prop].pointSpent + 1}`
+        spanText.textContent = specobject[prop].rankText["1"];
 
     }
 

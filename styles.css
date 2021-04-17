@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body {
     display: flex;
@@ -205,20 +205,29 @@ body {
     width: 350px;
     border-radius: 0.2em;   
     padding: 4px;
-    opacity: 0.8;
+    opacity: 0.9;
     font-size: 14px;
 }
 
 .span-talent-name {
     color: white;
-    font-family: UbuntuMono, monospace;
+    font-family: Montserrat, monospace;
+    font-weight: bold;
     text-align: left;
-    
 }
 
 .span-talent-rank {
     color: gray;
-    font-family: UbuntuMono, monospace;
+    font-family: Montserrat, monospace;
     float: right;
+    font-weight: normal;
+}
+
+.span-talent-text {
+    color: #ffd100;
+    font-family: Montserrat, monospace;
+    float: left;
+    margin-top: 3px;
+    font-weight: normal;
 
 }

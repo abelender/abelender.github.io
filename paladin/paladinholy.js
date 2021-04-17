@@ -17,7 +17,12 @@ let paladinHoly = [
         pointSpent: 0,
         pointLimit: 5,
         isEnable: true,
-        lineNumber: 1
+        lineNumber: 1,
+        rankText: {
+            1: 'Increases your total strength by 2%'
+        }
+            
+
 
     },
 
