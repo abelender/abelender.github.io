@@ -1,13 +1,6 @@
 classIconNavBuilder(classIcons);
 globalSpanPoints();
 
-let divTalentTreeWrapper = document.createElement('div');
-    divTalentTreeWrapper.className = 'talent-tree-wrapper';
-
-document.body.appendChild(divTalentTreeWrapper);
-
-
-
 
 talentTreeBuilder(paladinHoly, 
                  'https://wallpapercave.com/wp/wp3449930.jpg', 
