@@ -25,9 +25,6 @@ let paladinHoly = [
             4: 'Increases your total strength by 8%',
             5: 'Increases your total strength by 10%',
         }
-            
-
-
     },
 
     {
@@ -44,8 +41,6 @@ let paladinHoly = [
             4: 'Increases your total Intellect by 8%',
             5: 'Increases your total Intellect by 10%',
         }
-
-
     },
 
     {   
