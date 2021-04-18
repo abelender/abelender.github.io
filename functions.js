@@ -200,6 +200,10 @@ function globalSpanPoints() {
 
 }
 
+function talentTreeStructure() {
+    
+}
+
 function updateGlobalSpanPoints () {
 
     document.getElementById('spanglobalpoints').textContent = `${61 - globalTalentLimit}`;
