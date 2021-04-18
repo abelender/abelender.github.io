@@ -210,6 +210,7 @@ body {
 }
 
 .span-talent-name {
+    display: inline-block;
     color: white;
     font-family: Montserrat, monospace;
     font-weight: bold;
@@ -217,6 +218,7 @@ body {
 }
 
 .span-talent-rank {
+    /* display: inline-block; */
     color: gray;
     font-family: Montserrat, monospace;
     float: right;
@@ -224,10 +226,26 @@ body {
 }
 
 .span-talent-text {
+    display: block;
     color: #ffd100;
     font-family: Montserrat, monospace;
-    float: left;
     margin-top: 3px;
     font-weight: normal;
 
+}
+
+.span-talent-bottom {
+    display: block;
+    color: #33d31e;
+    font-family: Montserrat, monospace;
+    margin-top: 8px;
+    font-weight: normal;
+}
+
+.span-next-rank {
+    display: block;
+    color: white;
+    font-family: Montserrat, monospace;
+    margin-top: 7px;
+    font-weight: normal;
 }

@@ -19,7 +19,11 @@ let paladinHoly = [
         isEnable: true,
         lineNumber: 1,
         rankText: {
-            1: 'Increases your total strength by 2%'
+            1: 'Increases your total strength by 2%',
+            2: 'Increases your total strength by 4%',
+            3: 'Increases your total strength by 6%',
+            4: 'Increases your total strength by 8%',
+            5: 'Increases your total strength by 10%',
         }
             
 
@@ -32,7 +36,14 @@ let paladinHoly = [
         pointSpent: 0,
         pointLimit: 5,
         isEnable: true,
-        lineNumber: 1
+        lineNumber: 1,
+        rankText: {
+            1: 'Increases your total Intellect by 2%',
+            2: 'Increases your total Intellect by 4%',
+            3: 'Increases your total Intellect by 6%',
+            4: 'Increases your total Intellect by 8%',
+            5: 'Increases your total Intellect by 10%',
+        }
 
 
     },
@@ -43,9 +54,7 @@ let paladinHoly = [
         pointSpent: undefined,
         pointLimit: undefined,
         isEnable: false,
-        lineNumber: 1
-
-
+        lineNumber: 1,
         
     },
 
@@ -67,7 +76,14 @@ let paladinHoly = [
         pointSpent: 0,
         pointLimit: 5,
         isEnable: false,
-        lineNumber: 2
+        lineNumber: 2,
+        rankText: {
+            1: 'Gives your Flash of Light and Holy Light spells a 14% chance to not lose casting time when you take damage.',
+            2: 'Gives your Flash of Light and Holy Light spells a 28% chance to not lose casting time when you take damage.',
+            3: 'Gives your Flash of Light and Holy Light spells a 42% chance to not lose casting time when you take damage.',
+            4: 'Gives your Flash of Light and Holy Light spells a 56% chance to not lose casting time when you take damage.',
+            5: 'Gives your Flash of Light and Holy Light spells a 70% chance to not lose casting time when you take damage.',
+        }
 
 
     },

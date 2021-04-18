@@ -1,6 +1,5 @@
 let globalTalentLimit = 0;
 
-
 function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
     
     let divTalentTreeHeader = document.createElement('div');
@@ -89,8 +88,17 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
             let spanRank = document.createElement('span');
                 spanRank.className = 'span-talent-rank';
 
-            let spanText = document.createElement('span');
-                spanText.className = 'span-talent-text';
+            let spanText1 = document.createElement('span');
+                spanText1.className = 'span-talent-text';
+
+            let nextRank = document.createElement('span');
+                nextRank.className = 'span-next-rank';
+
+            let spanText2 = document.createElement('span');
+                spanText2.className = 'span-talent-text';
+
+            let spanBottom = document.createElement('span');
+                spanBottom.className = 'span-talent-bottom';
 
           
 
@@ -98,16 +106,19 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
                 addTalentPoint(ev, span, specobject, prop, spanPoints, divTalentTree);}, false);
 
             div.addEventListener('click', function(ev) { 
-                divTalentInfo(specobject, prop, spanName, spanRank, spanText);}, false);
+                divTalentInfo(spec, specobject, prop, spanName, spanRank, spanText1, nextRank, spanText2, spanBottom);}, false);
 
             div.addEventListener('contextmenu', function(ev) { 
                 subTalentPoint(ev, span, specobject, prop, spanPoints, divTalentTree);}, false);
+
+            div.addEventListener('contextmenu', function(ev) { 
+                divTalentInfo(spec, specobject, prop, spanName, spanRank, spanText1, nextRank, spanText2, spanBottom);}, false);
 
             div.addEventListener("mouseover", function() {
                 divDisplay.style.display = "block";
                 div.style.transform = "none";
                 img.style.borderColor = 'rgb(228, 252, 13)';
-                divTalentInfo(specobject, prop, spanName, spanRank, spanText);
+                divTalentInfo(spec, specobject, prop, spanName, spanRank, spanText1, nextRank, spanText2, spanBottom);
             });
 
             div.addEventListener("mouseout", function() {
@@ -118,7 +129,10 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
 
             divDisplay.appendChild(spanName);
             divDisplay.appendChild(spanRank);
-            divDisplay.appendChild(spanText);
+            divDisplay.appendChild(spanText1);
+            divDisplay.appendChild(nextRank);
+            divDisplay.appendChild(spanText2);
+            divDisplay.appendChild(spanBottom);
 
         }
     
@@ -339,18 +353,52 @@ function checkForEnable (specobject, spanPoints, divTalentTree) {
 
 }
 
-function divTalentInfo (specobject, prop, spanName, spanRank, spanText) {
+function divTalentInfo (spec, specobject, prop, spanName, spanRank, spanText1, nextrank, spanText2, spanBottom) {
            
-    
-    console.log(spanText.textContent = specobject[prop].rankText["1"]);
+    let toRank = specobject[prop].pointSpent;
 
-    if(specobject[prop].pointSpent == 0) {
+    console.log(typeof(specobject));
+
+
+    if(toRank == 0) {
     
         spanName.textContent = specobject[prop].name;
-        spanRank.textContent = `Rank ${specobject[prop].pointSpent + 1}`
-        spanText.textContent = specobject[prop].rankText["1"];
+        spanRank.textContent = `Rank ${toRank + 1}`
+        spanText1.textContent = specobject[prop].rankText["1"];
+        nextrank.textContent = '';
+        spanText2.textContent = '';
+
+        if(specobject[prop].isEnable == true) {
+           spanBottom.textContent = 'Click to learn';
+        } else {
+            spanBottom.style.color = 'red';
+            spanBottom.textContent = `Requires ${specobject[prop].lineNumber * 5 - 5} points in ` + spec;
+        }
 
     }
+
+    if(toRank > 0 && toRank < 5 ) { 
+
+        spanName.textContent = specobject[prop].name;
+        spanRank.textContent = `Rank ${toRank}`
+        spanText1.textContent = specobject[prop].rankText[`${toRank}`];
+        nextrank.textContent = 'Next Rank: ';
+        spanText2.textContent = specobject[prop].rankText[`${toRank + 1}`];
+        spanBottom.textContent = 'Click to learn';
+
+       }
+
+    if(toRank == 5) {
+    
+        spanName.textContent = specobject[prop].name;
+        spanRank.textContent = `Rank ${specobject[prop].pointSpent}`
+        spanText1.textContent = specobject[prop].rankText[`${toRank}`];
+        nextrank.textContent = '';
+        spanText2.textContent = '';
+        spanBottom.textContent = 'Right click to unlearn';
+
+    }
+
 
 }
 
