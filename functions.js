@@ -2,8 +2,6 @@ let globalTalentLimit = 0;
 
 function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
     
-    let divTalentTreeWrapper = document.createElement('div');
-        divTalentTreeWrapper.className = 'talent-tree-wrapper';
    
     let divTalentTreeHeader = document.createElement('div');
         divTalentTreeHeader.className = 'talent-tree-header';
@@ -147,7 +145,6 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
     divTalentTreeBG.style.backgroundImage = `url('${backgroundImage}')`;
     divTalentTree.appendChild(divTalentTreeBG);
     divTalentTreeWrapper.appendChild(divTalentTree);
-    document.body.appendChild(divTalentTreeWrapper);
 
 
     imgDelPoints.addEventListener('click', function(ev) { 
