@@ -79,8 +79,6 @@ let paladinHoly = [
             4: 'Gives your Flash of Light and Holy Light spells a 56% chance to not lose casting time when you take damage.',
             5: 'Gives your Flash of Light and Holy Light spells a 70% chance to not lose casting time when you take damage.',
         }
-
-
     },
 
     {
@@ -89,9 +87,14 @@ let paladinHoly = [
         pointSpent: 0,
         pointLimit: 5,
         isEnable: false,
-        lineNumber: 2
-
-
+        lineNumber: 2,
+        rankText: {
+            1: 'Increases the damage done by your Seal of Righteousness and Judgement of Righteousness by 3%.',
+            2: 'Increases the damage done by your Seal of Righteousness and Judgement of Righteousness by 6%.',
+            3: 'Increases the damage done by your Seal of Righteousness and Judgement of Righteousness by 9%.',
+            4: 'Increases the damage done by your Seal of Righteousness and Judgement of Righteousness by 12%.',
+            5: 'Increases the damage done by your Seal of Righteousness and Judgement of Righteousness by 15%.',
+        }
     },
 
     {   
@@ -112,8 +115,13 @@ let paladinHoly = [
         pointSpent: 0,
         pointLimit: 3,
         isEnable: false,
-        lineNumber: 3
-
+        lineNumber: 3,
+        rankText: {
+            1: 'Increases the amount healed by your Holy Light and Flash of Light spells by 4%.',
+            2: 'Increases the amount healed by your Holy Light and Flash of Light spells by 8%.',
+            3: 'Increases the amount healed by your Holy Light and Flash of Light spells by 12%.',
+        }
+        
 
     },
 
@@ -123,7 +131,10 @@ let paladinHoly = [
         pointSpent: 0,
         pointLimit: 1,
         isEnable: false,
-        lineNumber: 3
+        lineNumber: 3,
+        rankText: {
+            1: 'Increases the radius of your Auras to 40 yards.',
+        }
 
 
     },
@@ -134,7 +145,11 @@ let paladinHoly = [
         pointSpent: 0,
         pointLimit: 2,
         isEnable: false,
-        lineNumber: 3
+        lineNumber: 3,
+        rankText: {
+            1: 'Gives the target of your Lay on Hands spell a 15% bonus to their armor value from items for 2 min.  In addition, the cooldown for your Lay on Hands spell is reduced by 10 min.',
+            2: 'Gives the target of your Lay on Hands spell a 30% bonus to their armor value from items for 2 min.  In addition, the cooldown for your Lay on Hands spell is reduced by 20 min.',
+        }
 
 
     },
@@ -145,8 +160,11 @@ let paladinHoly = [
         pointSpent: 0,
         pointLimit: 2,
         isEnable: false,
-        lineNumber: 3
-
+        lineNumber: 3,
+        rankText: {
+            1: 'Increases your total Intellect by 2%',
+            2: 'Increases your total Intellect by 4%',
+        }
 
     },
 
@@ -168,7 +186,15 @@ let paladinHoly = [
         pointSpent: 0,
         pointLimit: 5,
         isEnable: false,
-        lineNumber: 4
+        lineNumber: 4,
+        rankText: {
+            1: 'After getting a critical effect from your Flash of Light, Holy Light, or Holy Shock heal spell, gives you a 20% chance to gain Mana equal to the base cost of the spell.',
+            2: 'After getting a critical effect from your Flash of Light, Holy Light, or Holy Shock heal spell, gives you a 40% chance to gain Mana equal to the base cost of the spell.',
+            3: 'After getting a critical effect from your Flash of Light, Holy Light, or Holy Shock heal spell, gives you a 60% chance to gain Mana equal to the base cost of the spell.',
+            4: 'After getting a critical effect from your Flash of Light, Holy Light, or Holy Shock heal spell, gives you a 80% chance to gain Mana equal to the base cost of the spell.',
+            5: 'After getting a critical effect from your Flash of Light, Holy Light, or Holy Shock heal spell, gives you a 100% chance to gain Mana equal to the base cost of the spell.',
+        }
+        
 
 
     },
@@ -179,7 +205,11 @@ let paladinHoly = [
         pointSpent: 0,
         pointLimit: 2,
         isEnable: false,
-        lineNumber: 4
+        lineNumber: 4,
+        rankText: {
+            1: 'Increases the effect of your Blessing of Wisdom spell by 10%.',
+            2: 'Increases the effect of your Blessing of Wisdom spell by 20%.',
+        }
 
 
     },

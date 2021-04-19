@@ -2,7 +2,7 @@ let globalTalentLimit = 0;
 
 function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
     
-   
+    
     let divTalentTreeHeader = document.createElement('div');
         divTalentTreeHeader.className = 'talent-tree-header';
 
@@ -160,6 +160,7 @@ function classIconNavBuilder (classicon) {
         for(let prop in classicon){
     
             
+            
             let div = document.createElement('div');
                 div.className = 'class-icon';
         
@@ -173,6 +174,9 @@ function classIconNavBuilder (classicon) {
                 spanHeader.textContent = classicon[prop].class;
                 div.appendChild(spanHeader);
 
+
+            div.addEventListener('click', function(ev) { 
+                createPaladin();}, false);
 
                 divClassIconWrapper.appendChild(div);
 
@@ -202,11 +206,6 @@ function globalSpanPoints() {
 
 }
 
-function talentTreeStructure() {
-
-
-
-}
 
 function updateGlobalSpanPoints () {
 
@@ -378,6 +377,7 @@ function divTalentInfo (spec, specobject, prop, spanName, spanRank, spanText1, n
 
         if(specobject[prop].isEnable == true) {
            spanBottom.textContent = 'Click to learn';
+           spanBottom.style.color = "#33d31e";
         } else {
             spanBottom.style.color = 'red';
             spanBottom.textContent = `Requires ${specobject[prop].lineNumber * 5 - 5} points in ` + spec;
@@ -385,7 +385,7 @@ function divTalentInfo (spec, specobject, prop, spanName, spanRank, spanText1, n
 
     }
 
-    if(toRank > 0 && toRank < 5 ) { 
+    if(toRank > 0 && toRank < specobject[prop].pointLimit ) { 
 
         spanName.textContent = specobject[prop].name;
         spanRank.textContent = `Rank ${toRank}`
@@ -396,7 +396,7 @@ function divTalentInfo (spec, specobject, prop, spanName, spanRank, spanText1, n
 
        }
 
-    if(toRank == 5) {
+    if(toRank == specobject[prop].pointLimit) {
     
         spanName.textContent = specobject[prop].name;
         spanRank.textContent = `Rank ${specobject[prop].pointSpent}`
@@ -406,7 +406,5 @@ function divTalentInfo (spec, specobject, prop, spanName, spanRank, spanText1, n
         spanBottom.textContent = 'Right click to unlearn';
 
     }
-
-
 }
 
