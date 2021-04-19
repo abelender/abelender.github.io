@@ -7,6 +7,9 @@ let paladinHoly = [
         pointLimit: undefined,
         isEnable: false,
         lineNumber: 1,
+        rankText: {
+
+        },
         isTalent: false
 
 
