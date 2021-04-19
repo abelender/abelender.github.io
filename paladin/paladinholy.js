@@ -232,7 +232,12 @@ let paladinHoly = [
         pointSpent: 0,
         pointLimit: 3,
         isEnable: false,
-        lineNumber: 5
+        lineNumber: 5,
+        rankText: {
+            1: 'Increases your resistance to Curse and Disease effects by 5%.',
+            2: 'Increases your resistance to Curse and Disease effects by 10%.',
+            3: 'Increases your resistance to Curse and Disease effects by 15%.'
+        }
 
 
     },
@@ -243,7 +248,10 @@ let paladinHoly = [
         pointSpent: 0,
         pointLimit: 1,
         isEnable: false,
-        lineNumber: 5
+        lineNumber: 5,
+        rankText: {
+            1: 'When activated, gives your next Flash of Light, Holy Light, or Holy Shock spell a 100% critical effect chance.'
+        }
 
 
     },
@@ -254,7 +262,12 @@ let paladinHoly = [
         pointSpent: 0,
         pointLimit: 3,
         isEnable: false,
-        lineNumber: 5
+        lineNumber: 5,
+        rankText: {
+            1: 'Increases the critical strike chance of your Holy Light spell by 2%.',
+            2: 'Increases the critical strike chance of your Holy Light spell by 4%.',
+            3: 'Increases the critical strike chance of your Holy Light spell by 6%.'
+        }
 
 
     },
@@ -277,7 +290,11 @@ let paladinHoly = [
         pointSpent: 0,
         pointLimit: 2,
         isEnable: false,
-        lineNumber: 6
+        lineNumber: 6,
+        rankText: {
+            1: 'Reduces the mana cost of your Cleanse and Consecration spells by 5% and increases the critical strike chance of your Exorcism and Holy Wrath spells by 10%.',
+            2: 'Reduces the mana cost of your Cleanse and Consecration spells by 5% and increases the critical strike chance of your Exorcism and Holy Wrath spells by 20%.'
+        }
 
 
     },
@@ -300,7 +317,14 @@ let paladinHoly = [
         pointSpent: 0,
         pointLimit: 5,
         isEnable: false,
-        lineNumber: 6
+        lineNumber: 6,
+        rankText: {
+            1: 'Increases the critical effect chance of your Holy spells by 1%.',
+            2: 'Increases the critical effect chance of your Holy spells by 2%.',
+            3: 'Increases the critical effect chance of your Holy spells by 3%.',
+            4: 'Increases the critical effect chance of your Holy spells by 4%.',
+            5: 'Increases the critical effect chance of your Holy spells by 5%.'
+        }
 
 
     },
@@ -323,7 +347,12 @@ let paladinHoly = [
         pointSpent: 0,
         pointLimit: 3,
         isEnable: false,
-        lineNumber: 7
+        lineNumber: 7,
+        rankText: {
+            1: 'Gives your Holy Light spell a 33% chance to reduce the cast time of your next Holy Light spell by 0.5 sec. This effect lasts 15 sec.',
+            2: 'Gives your Holy Light spell a 66% chance to reduce the cast time of your next Holy Light spell by 0.5 sec. This effect lasts 15 sec.',
+            3: 'Gives your Holy Light spell a 100% chance to reduce the cast time of your next Holy Light spell by 0.5 sec. This effect lasts 15 sec.'
+        }
 
 
     },
@@ -334,7 +363,11 @@ let paladinHoly = [
         pointSpent: 0,
         pointLimit: 1,
         isEnable: false,
-        lineNumber: 7
+        lineNumber: 7,
+        rankText: {
+            1: 'Blasts the target with Holy energy, causing 721 to 779 Holy damage to an enemy, or 913 to 987 healing to an ally.'
+        }
+
 
 
     },
@@ -345,7 +378,12 @@ let paladinHoly = [
         pointSpent: 0,
         pointLimit: 3,
         isEnable: false,
-        lineNumber: 7
+        lineNumber: 7,
+        rankText: {
+            1: 'All attacks against you have a 4% chance to cause half damage.',
+            2: 'All attacks against you have a 7% chance to cause half damage.',
+            3: 'All attacks against you have a 10% chance to cause half damage.'
+        }
 
 
     },
@@ -380,7 +418,14 @@ let paladinHoly = [
         pointSpent: 0,
         pointLimit: 5,
         isEnable: false,
-        lineNumber: 8
+        lineNumber: 8,
+        rankText: {
+            1: 'Increases your spell damage and healing by 7% of your total Intellect.',
+            2: 'Increases your spell damage and healing by 14% of your total Intellect.',
+            3: 'Increases your spell damage and healing by 21% of your total Intellect.',
+            4: 'Increases your spell damage and healing by 28% of your total Intellect.',
+            5: 'Increases your spell damage and healing by 35% of your total Intellect.'
+        }
 
 
     },
@@ -427,7 +472,10 @@ let paladinHoly = [
         pointSpent: 0,
         pointLimit: 1,
         isEnable: false,
-        lineNumber: 9
+        lineNumber: 9,
+        rankText: {
+            1: 'Reduces the mana cost of all spells by 50% for 15 sec.'
+        }
 
 
     },
