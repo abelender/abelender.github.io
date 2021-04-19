@@ -10,7 +10,8 @@ let paladinretribution = [
         rankText: {
 
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
         
     },
     {   
@@ -27,7 +28,9 @@ let paladinretribution = [
             4: 'Increases the melee attack power bonus of your Blessing of Might by 16%.',
             5: 'Increases the melee attack power bonus of your Blessing of Might by 20%.'
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -45,7 +48,9 @@ let paladinretribution = [
             4: 'Reduces the Mana cost of your Judgement and Seal spells by 12%.',
             5: 'Reduces the Mana cost of your Judgement and Seal spells by 15%.'
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -59,7 +64,9 @@ let paladinretribution = [
         rankText: {
 
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -74,7 +81,9 @@ let paladinretribution = [
             1: 'Decreases the cooldown of your Judgement spell by 1 sec.',
             2: 'Decreases the cooldown of your Judgement spell by 2 sec.'
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -90,7 +99,9 @@ let paladinretribution = [
             2: 'In addition to the normal effect, your Judgement of the Crusader spell will also increase the critical strike chance of all attacks made against that target by an additional 2%.',
             3: 'In addition to the normal effect, your Judgement of the Crusader spell will also increase the critical strike chance of all attacks made against that target by an additional 3%.   '
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -108,7 +119,9 @@ let paladinretribution = [
             4: 'Increases your Parry chance by 4%.',
             5: 'Increases your Parry chance by 5%.'
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -122,7 +135,9 @@ let paladinretribution = [
         rankText: {
 
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -138,7 +153,9 @@ let paladinretribution = [
             2: "Gives the Paladin's damaging melee attacks a chance to reduce the target's attributes by 10% for 15 sec.",
             3: "Gives the Paladin's damaging melee attacks a chance to reduce the target's attributes by 15 % for 15 sec."
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -156,7 +173,9 @@ let paladinretribution = [
             4: 'Increases your chance to get a critical strike with melee weapons by 4%.',
             5: 'Increases your chance to get a critical strike with melee weapons by 5%.'
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -170,7 +189,9 @@ let paladinretribution = [
         rankText: {
             1: "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage. Only one Seal can be active on the Paladin at any one time. Lasts 30 sec." + "\r \n" + "Unleashing this Seal's energy will judge an enemy, instantly causing 228 to 252 Holy damage, 456 to 504 if the target is stunned or incapacitated."
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -186,7 +207,9 @@ let paladinretribution = [
             2: "Reduces the chance you'll be hit by spells by 2% and increases movement and mounted movement speed by 10%. This does not stack with other movement speed increasing effects.",
             3: "Reduces the chance you'll be hit by spells by 3% and increases movement and mounted movement speed by 15%. This does not stack with other movement speed increasing effects."
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -201,7 +224,9 @@ let paladinretribution = [
             1: "All spell criticals against you cause 15% of the damage taken to the caster as well. The damage caused by Eye for an Eye will not exceed 50% of the Paladin's total health.",
             2: "All spell criticals against you cause 30% of the damage taken to the caster as well. The damage caused by Eye for an Eye will not exceed 50% of the Paladin's total health."
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -215,7 +240,9 @@ let paladinretribution = [
         rankText: {
 
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -230,7 +257,9 @@ let paladinretribution = [
             1: "Increases the damage done by your Retribution Aura by 25%.",
             2: "Increases the damage done by your Retribution Aura by 50%."
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -246,7 +275,9 @@ let paladinretribution = [
             2: "Increases all damage caused against Humanoids, Demons, Undead and Elementals by 2%.",
             3: "Increases all damage caused against Humanoids, Demons, Undead and Elementals by 3%."
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -262,7 +293,9 @@ let paladinretribution = [
             2: "Increases the damage you deal with two-handed melee weapons by 4%.",
             3: "Increases the damage you deal with two-handed melee weapons by 6%."
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -276,7 +309,9 @@ let paladinretribution = [
         rankText: {
 
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -290,7 +325,9 @@ let paladinretribution = [
         rankText: {
             1: "Increases Holy damage done by party members within 30 yards by 10%. Players may only have one Aura on them per Paladin at any one time."
         },
-        isTalent: true
+        isTalent: true,
+        addRequirement: undefined
+
 
         
     },
@@ -305,7 +342,9 @@ let paladinretribution = [
             1: "The amount of damage caused by targets affected by Sanctity Aura is increased by 1%.",
             2: "The amount of damage caused by targets affected by Sanctity Aura is increased by 2%."
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -319,7 +358,9 @@ let paladinretribution = [
         rankText: {
 
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -337,7 +378,9 @@ let paladinretribution = [
             4: "Gives you a 4% bonus to Physical and Holy damage you deal for 15 sec after dealing a critical strike from a weapon swing, spell or ability. This effect stacks up to 3 times",
             5: "Gives you a 5% bonus to Physical and Holy damage you deal for 15 sec after dealing a critical strike from a weapon swing, spell or ability. This effect stacks up to 3 times"
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -353,7 +396,9 @@ let paladinretribution = [
             2: "Gives your Judgement spell a 66% chance to return 80% of the mana cost of the judged seal.",
             3: "Gives your Judgement spell a 100% chance to return 80% of the mana cost of the judged seal."
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -367,7 +412,9 @@ let paladinretribution = [
         rankText: {
 
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -383,7 +430,9 @@ let paladinretribution = [
             2: "Increases your chance to critically hit with all spells and attacks by 2% and reduces the chance your Seals will be dispelled by 66%.",
             3: "Increases your chance to critically hit with all spells and attacks by 3% and reduces the chance your Seals will be dispelled by 100%."
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -397,7 +446,9 @@ let paladinretribution = [
         rankText: {
             1: "Puts the enemy target in a state of meditation, incapacitating them for up to 6 sec. Any damage caused will awaken the target. Only works against Humanoids."
         },
-        isTalent: true
+        isTalent: true,
+        addRequirement: undefined
+
 
         
     },
@@ -413,7 +464,9 @@ let paladinretribution = [
             2: "Melee and ranged critical strikes against you cause 7% less damage.",
             3: "Melee and ranged critical strikes against you cause 10% less damage."
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -427,7 +480,9 @@ let paladinretribution = [
         rankText: {
 
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -441,7 +496,9 @@ let paladinretribution = [
         rankText: {
 
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -459,7 +516,9 @@ let paladinretribution = [
             4: "Increases the critical strike chance of all Judgements capable of a critical hit by 12% and reduces threat caused by all actions by 24% except when under the effects of Righteous Fury.",
             5: "Increases the critical strike chance of all Judgements capable of a critical hit by 15% and reduces threat caused by all actions by 30% except when under the effects of Righteous Fury."
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -473,7 +532,9 @@ let paladinretribution = [
         rankText: {
 
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -487,7 +548,9 @@ let paladinretribution = [
         rankText: {
 
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -501,7 +564,9 @@ let paladinretribution = [
         rankText: {
 
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -515,7 +580,9 @@ let paladinretribution = [
         rankText: {
             1: "An instant strike that causes 110% weapon damage and refreshes all Judgements on the target."
         },
-        isTalent: true
+        isTalent: true,
+        addRequirement: undefined
+
 
         
     },
@@ -529,7 +596,9 @@ let paladinretribution = [
         rankText: {
 
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
@@ -543,7 +612,9 @@ let paladinretribution = [
         rankText: {
 
         },
-        isTalent: false
+        isTalent: false,
+        addRequirement: undefined
+
 
         
     },
