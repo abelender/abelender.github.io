@@ -242,6 +242,14 @@ body {
     font-weight: normal;
 }
 
+.span-talent-bottom-add {
+    display: block;
+    color: red;
+    font-family: Montserrat, monospace;
+    margin-top: 6px;
+    font-weight: normal;
+}
+
 .span-next-rank {
     display: block;
     color: white;

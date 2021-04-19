@@ -209,7 +209,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: "Requires 5 points in Redoubt"
 
 
 
@@ -477,7 +477,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: "Requires 1 points in Holy Shield"
 
 
 
@@ -495,7 +495,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: "Requires 1 points in Blessing of Sanctuary"
 
 
 
@@ -640,7 +640,7 @@ let paladinprotection = [
             1: 'Hurls a holy shield at the enemy, dealing 494 to 602 Holy damage, dazing them and then jumping to nearby enemies. Affects 3 total targets. Lasts 6 sec.'
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: "Requires 1 points in Holy Shield"
 
 
 

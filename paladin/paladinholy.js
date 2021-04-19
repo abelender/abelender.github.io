@@ -309,7 +309,7 @@ let paladinHoly = [
             1: 'When activated, gives your next Flash of Light, Holy Light, or Holy Shock spell a 100% critical effect chance.'
         },
         isTalent: true,
-        addRequirement: undefined
+        addRequirement: "Requires 5 points in Illumination"
 
 
 
@@ -448,7 +448,7 @@ let paladinHoly = [
             1: 'Blasts the target with Holy energy, causing 721 to 779 Holy damage to an enemy, or 913 to 987 healing to an ally.'
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: "Requires 1 points in Divine Favor"
 
 
 

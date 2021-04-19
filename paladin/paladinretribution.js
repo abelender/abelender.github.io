@@ -343,7 +343,7 @@ let paladinretribution = [
             2: "The amount of damage caused by targets affected by Sanctity Aura is increased by 2%."
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: "Requires 1 points in Sanctity Aura"
 
 
         
@@ -379,7 +379,7 @@ let paladinretribution = [
             5: "Gives you a 5% bonus to Physical and Holy damage you deal for 15 sec after dealing a critical strike from a weapon swing, spell or ability. This effect stacks up to 3 times"
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: "Requires 5 points in Conviction"
 
 
         
@@ -517,7 +517,7 @@ let paladinretribution = [
             5: "Increases the critical strike chance of all Judgements capable of a critical hit by 15% and reduces threat caused by all actions by 30% except when under the effects of Righteous Fury."
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: "Requires 1 points in Repentance"
 
 
         

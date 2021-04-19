@@ -101,25 +101,28 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
             let spanBottom = document.createElement('span');
                 spanBottom.className = 'span-talent-bottom';
 
+            let spanBottomAdd = document.createElement('span');
+                spanBottomAdd.className = 'span-talent-bottom-add';
+
           
 
             div.addEventListener('click', function(ev) { 
                 addTalentPoint(ev, span, specobject, prop, spanPoints, divTalentTree);}, false);
 
             div.addEventListener('click', function(ev) { 
-                divTalentInfo(spec, specobject, prop, spanName, spanRank, spanText1, nextRank, spanText2, spanBottom);}, false);
+                divTalentInfo(spec, specobject, prop, spanName, spanRank, spanText1, nextRank, spanText2, spanBottom, spanBottomAdd);}, false);
 
             div.addEventListener('contextmenu', function(ev) { 
                 subTalentPoint(ev, span, specobject, prop, spanPoints, divTalentTree);}, false);
 
             div.addEventListener('contextmenu', function(ev) { 
-                divTalentInfo(spec, specobject, prop, spanName, spanRank, spanText1, nextRank, spanText2, spanBottom);}, false);
+                divTalentInfo(spec, specobject, prop, spanName, spanRank, spanText1, nextRank, spanText2, spanBottom, spanBottomAdd);}, false);
 
             div.addEventListener("mouseover", function() {
                 divDisplay.style.display = "block";
                 div.style.transform = "none";
                 img.style.borderColor = 'rgb(228, 252, 13)';
-                divTalentInfo(spec, specobject, prop, spanName, spanRank, spanText1, nextRank, spanText2, spanBottom);
+                divTalentInfo(spec, specobject, prop, spanName, spanRank, spanText1, nextRank, spanText2, spanBottom, spanBottomAdd);
             });
 
             div.addEventListener("mouseout", function() {
@@ -134,6 +137,7 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
             divDisplay.appendChild(nextRank);
             divDisplay.appendChild(spanText2);
             divDisplay.appendChild(spanBottom);
+            divDisplay.appendChild(spanBottomAdd);
 
         }
     
@@ -360,7 +364,7 @@ function checkForEnable (specobject, spanPoints, divTalentTree) {
 
 }
 
-function divTalentInfo (spec, specobject, prop, spanName, spanRank, spanText1, nextrank, spanText2, spanBottom) {
+function divTalentInfo (spec, specobject, prop, spanName, spanRank, spanText1, nextrank, spanText2, spanBottom, spanBottomAdd) {
            
     if(specobject[prop].name !== undefined) {   
     
@@ -386,6 +390,10 @@ function divTalentInfo (spec, specobject, prop, spanName, spanRank, spanText1, n
             } else {
                 spanBottom.style.color = 'red';
                 spanBottom.textContent = `Requires ${specobject[prop].lineNumber * 5 - 5} points in ` + spec;
+                
+                if(specobject[prop].addRequirement !== undefined) {   
+                    spanBottomAdd.textContent = specobject[prop].addRequirement;
+                }
             }
 
         }
