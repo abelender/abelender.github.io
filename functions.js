@@ -370,7 +370,13 @@ function divTalentInfo (spec, specobject, prop, spanName, spanRank, spanText1, n
     if(toRank == 0) {
     
         spanName.textContent = specobject[prop].name;
-        spanRank.textContent = `Rank ${toRank + 1}`
+
+        if(specobject[prop].isTalent == false) {
+            spanRank.textContent = `Rank ${toRank + 1}`
+        } else {
+            spanRank.textContent = `Talent`;
+        }
+
         spanText1.textContent = specobject[prop].rankText["1"];
         nextrank.textContent = '';
         spanText2.textContent = '';
@@ -399,7 +405,13 @@ function divTalentInfo (spec, specobject, prop, spanName, spanRank, spanText1, n
     if(toRank == specobject[prop].pointLimit) {
     
         spanName.textContent = specobject[prop].name;
-        spanRank.textContent = `Rank ${specobject[prop].pointSpent}`
+
+        if(specobject[prop].isTalent == false) {
+            spanRank.textContent = `Rank ${specobject[prop].pointSpent}`;
+        } else {
+            spanRank.textContent = `Talent`;
+        }
+     
         spanText1.textContent = specobject[prop].rankText[`${toRank}`];
         nextrank.textContent = '';
         spanText2.textContent = '';

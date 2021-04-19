@@ -6,7 +6,9 @@ let paladinHoly = [
         pointSpent: undefined,
         pointLimit: undefined,
         isEnable: false,
-        lineNumber: 1
+        lineNumber: 1,
+        isTalent: false
+
 
         
     },
@@ -24,7 +26,9 @@ let paladinHoly = [
             3: 'Increases your total strength by 6%',
             4: 'Increases your total strength by 8%',
             5: 'Increases your total strength by 10%',
-        }
+        },
+        isTalent: false
+
     },
 
     {
@@ -40,7 +44,9 @@ let paladinHoly = [
             3: 'Increases your total Intellect by 6%',
             4: 'Increases your total Intellect by 8%',
             5: 'Increases your total Intellect by 10%',
-        }
+        },
+        isTalent: false
+
     },
 
     {   
@@ -50,6 +56,8 @@ let paladinHoly = [
         pointLimit: undefined,
         isEnable: false,
         lineNumber: 1,
+        isTalent: false
+
         
     },
 
@@ -59,10 +67,9 @@ let paladinHoly = [
         pointSpent: undefined,
         pointLimit: undefined,
         isEnable: false,
-        lineNumber: 2
+        lineNumber: 2,
+        isTalent: false
 
-
-        
     },
 
     {
@@ -78,7 +85,9 @@ let paladinHoly = [
             3: 'Gives your Flash of Light and Holy Light spells a 42% chance to not lose casting time when you take damage.',
             4: 'Gives your Flash of Light and Holy Light spells a 56% chance to not lose casting time when you take damage.',
             5: 'Gives your Flash of Light and Holy Light spells a 70% chance to not lose casting time when you take damage.',
-        }
+        },
+        isTalent: false
+
     },
 
     {
@@ -94,7 +103,9 @@ let paladinHoly = [
             3: 'Increases the damage done by your Seal of Righteousness and Judgement of Righteousness by 9%.',
             4: 'Increases the damage done by your Seal of Righteousness and Judgement of Righteousness by 12%.',
             5: 'Increases the damage done by your Seal of Righteousness and Judgement of Righteousness by 15%.',
-        }
+        },
+        isTalent: false
+
     },
 
     {   
@@ -103,9 +114,8 @@ let paladinHoly = [
         pointSpent: undefined,
         pointLimit: undefined,
         isEnable: false,
-        lineNumber: 2
-
-
+        lineNumber: 2,
+        isTalent: false
         
     },
 
@@ -120,7 +130,8 @@ let paladinHoly = [
             1: 'Increases the amount healed by your Holy Light and Flash of Light spells by 4%.',
             2: 'Increases the amount healed by your Holy Light and Flash of Light spells by 8%.',
             3: 'Increases the amount healed by your Holy Light and Flash of Light spells by 12%.',
-        }
+        },
+        isTalent: false
         
 
     },
@@ -134,7 +145,8 @@ let paladinHoly = [
         lineNumber: 3,
         rankText: {
             1: 'Increases the radius of your Auras to 40 yards.',
-        }
+        },
+        isTalent: true
 
 
     },
@@ -149,7 +161,8 @@ let paladinHoly = [
         rankText: {
             1: 'Gives the target of your Lay on Hands spell a 15% bonus to their armor value from items for 2 min.  In addition, the cooldown for your Lay on Hands spell is reduced by 10 min.',
             2: 'Gives the target of your Lay on Hands spell a 30% bonus to their armor value from items for 2 min.  In addition, the cooldown for your Lay on Hands spell is reduced by 20 min.',
-        }
+        },
+        isTalent: false
 
 
     },
@@ -164,7 +177,8 @@ let paladinHoly = [
         rankText: {
             1: 'Increases your total Intellect by 2%',
             2: 'Increases your total Intellect by 4%',
-        }
+        },
+        isTalent: false
 
     },
 
@@ -174,7 +188,8 @@ let paladinHoly = [
         pointSpent: undefined,
         pointLimit: undefined,
         isEnable: false,
-        lineNumber: 4
+        lineNumber: 4,
+        isTalent: false
 
 
         
@@ -193,7 +208,8 @@ let paladinHoly = [
             3: 'After getting a critical effect from your Flash of Light, Holy Light, or Holy Shock heal spell, gives you a 60% chance to gain Mana equal to the base cost of the spell.',
             4: 'After getting a critical effect from your Flash of Light, Holy Light, or Holy Shock heal spell, gives you a 80% chance to gain Mana equal to the base cost of the spell.',
             5: 'After getting a critical effect from your Flash of Light, Holy Light, or Holy Shock heal spell, gives you a 100% chance to gain Mana equal to the base cost of the spell.',
-        }
+        },
+        isTalent: false
         
 
 
@@ -209,7 +225,8 @@ let paladinHoly = [
         rankText: {
             1: 'Increases the effect of your Blessing of Wisdom spell by 10%.',
             2: 'Increases the effect of your Blessing of Wisdom spell by 20%.',
-        }
+        },
+        isTalent: false
 
 
     },
@@ -220,7 +237,8 @@ let paladinHoly = [
         pointSpent: undefined,
         pointLimit: undefined,
         isEnable: false,
-        lineNumber: 4
+        lineNumber: 4,
+        isTalent: false
 
 
         
@@ -237,7 +255,8 @@ let paladinHoly = [
             1: 'Increases your resistance to Curse and Disease effects by 5%.',
             2: 'Increases your resistance to Curse and Disease effects by 10%.',
             3: 'Increases your resistance to Curse and Disease effects by 15%.'
-        }
+        },
+        isTalent: false
 
 
     },
@@ -251,7 +270,8 @@ let paladinHoly = [
         lineNumber: 5,
         rankText: {
             1: 'When activated, gives your next Flash of Light, Holy Light, or Holy Shock spell a 100% critical effect chance.'
-        }
+        },
+        isTalent: true
 
 
     },
@@ -267,7 +287,8 @@ let paladinHoly = [
             1: 'Increases the critical strike chance of your Holy Light spell by 2%.',
             2: 'Increases the critical strike chance of your Holy Light spell by 4%.',
             3: 'Increases the critical strike chance of your Holy Light spell by 6%.'
-        }
+        },
+        isTalent: false
 
 
     },
@@ -278,7 +299,8 @@ let paladinHoly = [
         pointSpent: undefined,
         pointLimit: undefined,
         isEnable: false,
-        lineNumber: 5
+        lineNumber: 5,
+        isTalent: false
 
 
         
@@ -294,7 +316,8 @@ let paladinHoly = [
         rankText: {
             1: 'Reduces the mana cost of your Cleanse and Consecration spells by 5% and increases the critical strike chance of your Exorcism and Holy Wrath spells by 10%.',
             2: 'Reduces the mana cost of your Cleanse and Consecration spells by 5% and increases the critical strike chance of your Exorcism and Holy Wrath spells by 20%.'
-        }
+        },
+        isTalent: false
 
 
     },
@@ -305,7 +328,8 @@ let paladinHoly = [
         pointSpent: undefined,
         pointLimit: undefined,
         isEnable: false,
-        lineNumber: 6
+        lineNumber: 6,
+        isTalent: false
 
 
         
@@ -324,7 +348,8 @@ let paladinHoly = [
             3: 'Increases the critical effect chance of your Holy spells by 3%.',
             4: 'Increases the critical effect chance of your Holy spells by 4%.',
             5: 'Increases the critical effect chance of your Holy spells by 5%.'
-        }
+        },
+        isTalent: false
 
 
     },
@@ -335,7 +360,8 @@ let paladinHoly = [
         pointSpent: undefined,
         pointLimit: undefined,
         isEnable: false,
-        lineNumber: 6
+        lineNumber: 6,
+        isTalent: false
 
 
         
@@ -352,7 +378,8 @@ let paladinHoly = [
             1: 'Gives your Holy Light spell a 33% chance to reduce the cast time of your next Holy Light spell by 0.5 sec. This effect lasts 15 sec.',
             2: 'Gives your Holy Light spell a 66% chance to reduce the cast time of your next Holy Light spell by 0.5 sec. This effect lasts 15 sec.',
             3: 'Gives your Holy Light spell a 100% chance to reduce the cast time of your next Holy Light spell by 0.5 sec. This effect lasts 15 sec.'
-        }
+        },
+        isTalent: false
 
 
     },
@@ -366,7 +393,8 @@ let paladinHoly = [
         lineNumber: 7,
         rankText: {
             1: 'Blasts the target with Holy energy, causing 721 to 779 Holy damage to an enemy, or 913 to 987 healing to an ally.'
-        }
+        },
+        isTalent: false
 
 
 
@@ -383,7 +411,8 @@ let paladinHoly = [
             1: 'All attacks against you have a 4% chance to cause half damage.',
             2: 'All attacks against you have a 7% chance to cause half damage.',
             3: 'All attacks against you have a 10% chance to cause half damage.'
-        }
+        },
+        isTalent: false
 
 
     },
@@ -394,7 +423,8 @@ let paladinHoly = [
         pointSpent: undefined,
         pointLimit: undefined,
         isEnable: false,
-        lineNumber: 7
+        lineNumber: 7,
+        isTalent: false
 
 
         
@@ -406,7 +436,8 @@ let paladinHoly = [
         pointSpent: undefined,
         pointLimit: undefined,
         isEnable: false,
-        lineNumber: 8
+        lineNumber: 8,
+        isTalent: false
 
 
         
@@ -425,7 +456,8 @@ let paladinHoly = [
             3: 'Increases your spell damage and healing by 21% of your total Intellect.',
             4: 'Increases your spell damage and healing by 28% of your total Intellect.',
             5: 'Increases your spell damage and healing by 35% of your total Intellect.'
-        }
+        },
+        isTalent: false
 
 
     },
@@ -436,7 +468,8 @@ let paladinHoly = [
         pointSpent: undefined,
         pointLimit: undefined,
         isEnable: false,
-        lineNumber: 8
+        lineNumber: 8,
+        isTalent: false
 
 
         
@@ -448,7 +481,8 @@ let paladinHoly = [
         pointSpent: undefined,
         pointLimit: undefined,
         isEnable: false,
-        lineNumber: 8
+        lineNumber: 8,
+        isTalent: false
 
 
         
@@ -460,7 +494,8 @@ let paladinHoly = [
         pointSpent: undefined,
         pointLimit: undefined,
         isEnable: false,
-        lineNumber: 9
+        lineNumber: 9,
+        isTalent: false
 
 
         
@@ -475,7 +510,8 @@ let paladinHoly = [
         lineNumber: 9,
         rankText: {
             1: 'Reduces the mana cost of all spells by 50% for 15 sec.'
-        }
+        },
+        isTalent: true
 
 
     },
@@ -486,7 +522,8 @@ let paladinHoly = [
         pointSpent: undefined,
         pointLimit: undefined,
         isEnable: false,
-        lineNumber: 9
+        lineNumber: 9,
+        isTalent: false
 
 
         
@@ -498,7 +535,8 @@ let paladinHoly = [
         pointSpent: undefined,
         pointLimit: undefined,
         isEnable: false,
-        lineNumber: 9
+        lineNumber: 9,
+        isTalent: false
 
 
         
