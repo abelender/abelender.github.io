@@ -362,61 +362,61 @@ function checkForEnable (specobject, spanPoints, divTalentTree) {
 
 function divTalentInfo (spec, specobject, prop, spanName, spanRank, spanText1, nextrank, spanText2, spanBottom) {
            
-    let toRank = specobject[prop].pointSpent;
-
-    console.log(typeof(specobject));
-
-
-    if(toRank == 0) {
+    if(specobject[prop].name !== undefined) {   
     
-        spanName.textContent = specobject[prop].name;
+        let toRank = specobject[prop].pointSpent;
 
-        if(specobject[prop].isTalent == false) {
-            spanRank.textContent = `Rank ${toRank + 1}`
-        } else {
-            spanRank.textContent = `Talent`;
+        if(toRank == 0) {
+        
+            spanName.textContent = specobject[prop].name;
+
+            if(specobject[prop].isTalent == false) {
+                spanRank.textContent = `Rank ${toRank + 1}`
+            } else {
+                spanRank.textContent = `Talent`;
+            }
+
+            spanText1.textContent = specobject[prop].rankText["1"];
+            nextrank.textContent = '';
+            spanText2.textContent = '';
+
+            if(specobject[prop].isEnable == true) {
+            spanBottom.textContent = 'Click to learn';
+            spanBottom.style.color = "#33d31e";
+            } else {
+                spanBottom.style.color = 'red';
+                spanBottom.textContent = `Requires ${specobject[prop].lineNumber * 5 - 5} points in ` + spec;
+            }
+
         }
 
-        spanText1.textContent = specobject[prop].rankText["1"];
-        nextrank.textContent = '';
-        spanText2.textContent = '';
+        if(toRank > 0 && toRank < specobject[prop].pointLimit ) { 
 
-        if(specobject[prop].isEnable == true) {
-           spanBottom.textContent = 'Click to learn';
-           spanBottom.style.color = "#33d31e";
-        } else {
-            spanBottom.style.color = 'red';
-            spanBottom.textContent = `Requires ${specobject[prop].lineNumber * 5 - 5} points in ` + spec;
+            spanName.textContent = specobject[prop].name;
+            spanRank.textContent = `Rank ${toRank}`
+            spanText1.textContent = specobject[prop].rankText[`${toRank}`];
+            nextrank.textContent = 'Next Rank: ';
+            spanText2.textContent = specobject[prop].rankText[`${toRank + 1}`];
+            spanBottom.textContent = 'Click to learn';
+
         }
 
-    }
+        if(toRank == specobject[prop].pointLimit) {
+        
+            spanName.textContent = specobject[prop].name;
 
-    if(toRank > 0 && toRank < specobject[prop].pointLimit ) { 
+            if(specobject[prop].isTalent == false) {
+                spanRank.textContent = `Rank ${specobject[prop].pointSpent}`;
+            } else {
+                spanRank.textContent = `Talent`;
+            }
+        
+            spanText1.textContent = specobject[prop].rankText[`${toRank}`];
+            nextrank.textContent = '';
+            spanText2.textContent = '';
+            spanBottom.textContent = 'Right click to unlearn';
 
-        spanName.textContent = specobject[prop].name;
-        spanRank.textContent = `Rank ${toRank}`
-        spanText1.textContent = specobject[prop].rankText[`${toRank}`];
-        nextrank.textContent = 'Next Rank: ';
-        spanText2.textContent = specobject[prop].rankText[`${toRank + 1}`];
-        spanBottom.textContent = 'Click to learn';
-
-       }
-
-    if(toRank == specobject[prop].pointLimit) {
-    
-        spanName.textContent = specobject[prop].name;
-
-        if(specobject[prop].isTalent == false) {
-            spanRank.textContent = `Rank ${specobject[prop].pointSpent}`;
-        } else {
-            spanRank.textContent = `Talent`;
         }
-     
-        spanText1.textContent = specobject[prop].rankText[`${toRank}`];
-        nextrank.textContent = '';
-        spanText2.textContent = '';
-        spanBottom.textContent = 'Right click to unlearn';
-
     }
 }
 
