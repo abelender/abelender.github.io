@@ -392,7 +392,7 @@ function divTalentInfo (spec, specobject, prop, spanName, spanRank, spanText1, n
                 spanBottom.textContent = `Requires ${specobject[prop].lineNumber * 5 - 5} points in ` + spec;
                 
                 if(specobject[prop].addRequirement !== undefined) {   
-                    spanBottomAdd.textContent = specobject[prop].addRequirement;
+                    spanBottomAdd.textContent = specobject[prop].addRequirement();
                 }
             }
 
