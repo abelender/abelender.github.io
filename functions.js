@@ -294,16 +294,18 @@ function checkForEnable (specobject, spanPoints, divTalentTree) {
     let isLineEnable = [undefined, true, false, false, false, false, false, false, false, false];
     let lineSum = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     let row = 1;
+
+
     
     while(row < 10){
+
         for(let prop in specobject){
 
             if(specobject[prop].name !== undefined && specobject[prop].lineNumber === row ){
                 lineSum[row] += specobject[prop].pointSpent;
             }
-        
 
-            if(lineSum[row] >= 5) {
+            if(spanPoints.textContent >= (5 * row)) {
                 isLineFive[row] = true;
             } else {
                 isLineFive[row] = false;
@@ -332,6 +334,13 @@ function checkForEnable (specobject, spanPoints, divTalentTree) {
                 }              
             }            
         }
+
+        for(i = row; i <= 9; i++) {
+            lineSum[0] += lineSum[i];
+        }
+
+        console.log(lineSum);
+
         row++;
     }
 
@@ -353,12 +362,9 @@ function checkForEnable (specobject, spanPoints, divTalentTree) {
             }
             control += 1;
         }
-    }
 
-    for(i = 1; i <= 9; i++) {
-        lineSum[0] += lineSum[i];
-    }
 
+    }
 
     spanPoints.textContent = parseInt(lineSum[0]);
 
@@ -426,5 +432,19 @@ function divTalentInfo (spec, specobject, prop, spanName, spanRank, spanText1, n
 
         }
     }
+}
+
+function sumLine (array, index) {
+
+    let value = 0;
+    
+    for(i = index; i >= 0; i--) {
+        value += array[index];
+    }
+
+    console.log(value);
+
+
+    return value;
 }
 
