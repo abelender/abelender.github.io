@@ -11,7 +11,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -34,7 +34,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -56,7 +56,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -73,7 +73,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -93,7 +93,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -112,7 +112,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -129,7 +129,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -151,7 +151,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -169,7 +169,7 @@ let paladinprotection = [
 
         },
         isTalent: true,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -189,7 +189,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -231,7 +231,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -250,7 +250,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -270,7 +270,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -290,7 +290,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -307,7 +307,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -326,7 +326,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -344,7 +344,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -366,7 +366,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -383,7 +383,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -402,7 +402,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -419,7 +419,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -441,7 +441,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -458,7 +458,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -517,7 +517,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -534,7 +534,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -551,7 +551,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -568,7 +568,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -589,7 +589,7 @@ let paladinprotection = [
             5: 'Increases your expertise by 5, total Stamina by 10%.'
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -606,7 +606,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -623,7 +623,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -657,7 +657,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -674,7 +674,7 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         

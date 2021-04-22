@@ -11,7 +11,7 @@ let paladinHoly = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -33,7 +33,7 @@ let paladinHoly = [
             5: 'Increases your total strength by 10%',
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
     },
@@ -53,7 +53,7 @@ let paladinHoly = [
             5: 'Increases your total Intellect by 10%',
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
     },
@@ -66,7 +66,7 @@ let paladinHoly = [
         isEnable: false,
         lineNumber: 1,
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -80,7 +80,7 @@ let paladinHoly = [
         isEnable: false,
         lineNumber: 2,
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
     },
@@ -100,7 +100,7 @@ let paladinHoly = [
             5: 'Gives your Flash of Light and Holy Light spells a 70% chance to not lose casting time when you take damage.',
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
     },
@@ -120,7 +120,7 @@ let paladinHoly = [
             5: 'Increases the damage done by your Seal of Righteousness and Judgement of Righteousness by 15%.',
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
     },
@@ -133,7 +133,7 @@ let paladinHoly = [
         isEnable: false,
         lineNumber: 2,
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
         
     },
@@ -151,7 +151,7 @@ let paladinHoly = [
             3: 'Increases the amount healed by your Holy Light and Flash of Light spells by 12%.',
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
         
 
@@ -168,7 +168,7 @@ let paladinHoly = [
             1: 'Increases the radius of your Auras to 40 yards.',
         },
         isTalent: true,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -186,7 +186,7 @@ let paladinHoly = [
             2: 'Gives the target of your Lay on Hands spell a 30% bonus to their armor value from items for 2 min.  In addition, the cooldown for your Lay on Hands spell is reduced by 20 min.',
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -204,7 +204,7 @@ let paladinHoly = [
             2: 'Increases your total Intellect by 4%',
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
     },
@@ -217,7 +217,7 @@ let paladinHoly = [
         isEnable: false,
         lineNumber: 4,
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -239,7 +239,7 @@ let paladinHoly = [
             5: 'After getting a critical effect from your Flash of Light, Holy Light, or Holy Shock heal spell, gives you a 100% chance to gain Mana equal to the base cost of the spell.',
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
         
 
@@ -258,7 +258,7 @@ let paladinHoly = [
             2: 'Increases the effect of your Blessing of Wisdom spell by 20%.',
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -272,7 +272,7 @@ let paladinHoly = [
         isEnable: false,
         lineNumber: 4,
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -292,7 +292,7 @@ let paladinHoly = [
             3: 'Increases your resistance to Curse and Disease effects by 15%.'
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -309,7 +309,17 @@ let paladinHoly = [
             1: 'When activated, gives your next Flash of Light, Holy Light, or Holy Shock spell a 100% critical effect chance.'
         },
         isTalent: true,
-        addRequirement: function () { return "Requires 5 points in Illumination" },
+        addRequirement: function () { 
+
+            if(paladinHoly[13].pointSpent != paladinHoly[13].pointLimit) {
+                
+                return `Requires ${paladinHoly[13].pointLimit - paladinHoly[13].pointSpent} points in Illumination`;
+                
+            } else {
+
+                return "";
+            }
+        },
 
     },
 
@@ -326,7 +336,7 @@ let paladinHoly = [
             3: 'Increases the critical strike chance of your Holy Light spell by 6%.'
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -340,7 +350,7 @@ let paladinHoly = [
         isEnable: false,
         lineNumber: 5,
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -359,7 +369,7 @@ let paladinHoly = [
             2: 'Reduces the mana cost of your Cleanse and Consecration spells by 5% and increases the critical strike chance of your Exorcism and Holy Wrath spells by 20%.'
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -373,7 +383,7 @@ let paladinHoly = [
         isEnable: false,
         lineNumber: 6,
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -395,7 +405,7 @@ let paladinHoly = [
             5: 'Increases the critical effect chance of your Holy spells by 5%.'
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -409,7 +419,7 @@ let paladinHoly = [
         isEnable: false,
         lineNumber: 6,
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -429,7 +439,7 @@ let paladinHoly = [
             3: 'Gives your Holy Light spell a 100% chance to reduce the cast time of your next Holy Light spell by 0.5 sec. This effect lasts 15 sec.'
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -466,7 +476,7 @@ let paladinHoly = [
             3: 'All attacks against you have a 10% chance to cause half damage.'
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -480,7 +490,7 @@ let paladinHoly = [
         isEnable: false,
         lineNumber: 7,
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -495,7 +505,7 @@ let paladinHoly = [
         isEnable: false,
         lineNumber: 8,
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -517,7 +527,7 @@ let paladinHoly = [
             5: 'Increases your spell damage and healing by 35% of your total Intellect.'
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -531,7 +541,7 @@ let paladinHoly = [
         isEnable: false,
         lineNumber: 8,
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -546,7 +556,7 @@ let paladinHoly = [
         isEnable: false,
         lineNumber: 8,
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -561,7 +571,7 @@ let paladinHoly = [
         isEnable: false,
         lineNumber: 9,
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -579,7 +589,7 @@ let paladinHoly = [
             1: 'Reduces the mana cost of all spells by 50% for 15 sec.'
         },
         isTalent: true,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -593,7 +603,7 @@ let paladinHoly = [
         isEnable: false,
         lineNumber: 9,
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
 
@@ -608,7 +618,7 @@ let paladinHoly = [
         isEnable: false,
         lineNumber: 9,
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
         
     },

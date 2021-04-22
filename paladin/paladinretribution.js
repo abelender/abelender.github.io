@@ -11,7 +11,7 @@ let paladinretribution = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
         
     },
     {   
@@ -29,7 +29,7 @@ let paladinretribution = [
             5: 'Increases the melee attack power bonus of your Blessing of Might by 20%.'
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -49,7 +49,7 @@ let paladinretribution = [
             5: 'Reduces the Mana cost of your Judgement and Seal spells by 15%.'
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -65,7 +65,7 @@ let paladinretribution = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -82,7 +82,7 @@ let paladinretribution = [
             2: 'Decreases the cooldown of your Judgement spell by 2 sec.'
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -100,7 +100,7 @@ let paladinretribution = [
             3: 'In addition to the normal effect, your Judgement of the Crusader spell will also increase the critical strike chance of all attacks made against that target by an additional 3%.   '
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -120,7 +120,7 @@ let paladinretribution = [
             5: 'Increases your Parry chance by 5%.'
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -136,7 +136,7 @@ let paladinretribution = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -154,7 +154,7 @@ let paladinretribution = [
             3: "Gives the Paladin's damaging melee attacks a chance to reduce the target's attributes by 15 % for 15 sec."
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -174,7 +174,7 @@ let paladinretribution = [
             5: 'Increases your chance to get a critical strike with melee weapons by 5%.'
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -190,7 +190,7 @@ let paladinretribution = [
             1: "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage. Only one Seal can be active on the Paladin at any one time. Lasts 30 sec." + "\r \n" + "Unleashing this Seal's energy will judge an enemy, instantly causing 228 to 252 Holy damage, 456 to 504 if the target is stunned or incapacitated."
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -208,7 +208,7 @@ let paladinretribution = [
             3: "Reduces the chance you'll be hit by spells by 3% and increases movement and mounted movement speed by 15%. This does not stack with other movement speed increasing effects."
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -225,7 +225,7 @@ let paladinretribution = [
             2: "All spell criticals against you cause 30% of the damage taken to the caster as well. The damage caused by Eye for an Eye will not exceed 50% of the Paladin's total health."
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -241,7 +241,7 @@ let paladinretribution = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -258,7 +258,7 @@ let paladinretribution = [
             2: "Increases the damage done by your Retribution Aura by 50%."
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -276,7 +276,7 @@ let paladinretribution = [
             3: "Increases all damage caused against Humanoids, Demons, Undead and Elementals by 3%."
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -294,7 +294,7 @@ let paladinretribution = [
             3: "Increases the damage you deal with two-handed melee weapons by 6%."
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -310,7 +310,7 @@ let paladinretribution = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -326,7 +326,7 @@ let paladinretribution = [
             1: "Increases Holy damage done by party members within 30 yards by 10%. Players may only have one Aura on them per Paladin at any one time."
         },
         isTalent: true,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -359,7 +359,7 @@ let paladinretribution = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -397,7 +397,7 @@ let paladinretribution = [
             3: "Gives your Judgement spell a 100% chance to return 80% of the mana cost of the judged seal."
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -413,7 +413,7 @@ let paladinretribution = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -431,7 +431,7 @@ let paladinretribution = [
             3: "Increases your chance to critically hit with all spells and attacks by 3% and reduces the chance your Seals will be dispelled by 100%."
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -447,7 +447,7 @@ let paladinretribution = [
             1: "Puts the enemy target in a state of meditation, incapacitating them for up to 6 sec. Any damage caused will awaken the target. Only works against Humanoids."
         },
         isTalent: true,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -465,7 +465,7 @@ let paladinretribution = [
             3: "Melee and ranged critical strikes against you cause 10% less damage."
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -481,7 +481,7 @@ let paladinretribution = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -497,7 +497,7 @@ let paladinretribution = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -533,7 +533,7 @@ let paladinretribution = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -549,7 +549,7 @@ let paladinretribution = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -565,7 +565,7 @@ let paladinretribution = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -581,7 +581,7 @@ let paladinretribution = [
             1: "An instant strike that causes 110% weapon damage and refreshes all Judgements on the target."
         },
         isTalent: true,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -597,7 +597,7 @@ let paladinretribution = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
@@ -613,7 +613,7 @@ let paladinretribution = [
 
         },
         isTalent: false,
-        addRequirement: undefined
+        addRequirement: function() { return ""}
 
 
         
