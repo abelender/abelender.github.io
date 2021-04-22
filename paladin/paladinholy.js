@@ -456,7 +456,15 @@ let paladinHoly = [
             1: 'Blasts the target with Holy energy, causing 721 to 779 Holy damage to an enemy, or 913 to 987 healing to an ally.'
         },
         isTalent: false,
-        addRequirement: function () { return "Requires 1 points in Divine Favor" }
+        addRequirement: function () { 
+            if(paladinHoly[17].pointSpent != paladinHoly[17].pointLimit) {
+                
+                return `Requires ${paladinHoly[17].pointLimit - paladinHoly[17].pointSpent} points in Divine Favor`;
+                
+            } else {
+
+                return "";
+            } }
 
 
 
