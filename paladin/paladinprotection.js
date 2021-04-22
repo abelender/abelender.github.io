@@ -209,12 +209,23 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement: function () { return "Requires 5 points in Redoubt" }
+        addRequirement: function () {  
+            
+            if(paladinprotection[2].pointSpent != paladinprotection[2].pointLimit) {
+                
+            return `Requires ${paladinprotection[2].pointLimit - paladinprotection[2].pointSpent} points in Redoubt`;
+            
+            } else {
+
+                return "";
+            } 
+        } 
+    },
 
 
 
         
-    },
+    
     {   
         name: 'Anticipation',
         src: 'https://wow.zamimg.com/images/wow/icons/large/spell_magic_lesserinvisibilty.jpg',
@@ -477,7 +488,17 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement:  function () { return "Requires 1 points in Holy Shield" }
+        addRequirement:  function () { 
+            
+            if(paladinprotection[25].pointSpent != paladinprotection[25].pointLimit) {
+                
+                return `Requires ${paladinprotection[25].pointLimit - paladinprotection[25].pointSpent} points in Holy Shield`;
+                
+            } else {
+    
+                return "";
+            } 
+         }
 
 
 
@@ -495,10 +516,16 @@ let paladinprotection = [
 
         },
         isTalent: false,
-        addRequirement:  function () { return "Requires 1 points in Blessing of Sanctuary" }
-
-
-
+        addRequirement:  function () { 
+            if(paladinprotection[17].pointSpent != paladinprotection[17].pointLimit) {
+                
+                return `Requires ${paladinprotection[17].pointLimit - paladinprotection[17].pointSpent} points in Blessing of Sanctuary`;
+                
+                } else {
+    
+                    return "";
+                } 
+         }
         
     },
     {   
@@ -640,7 +667,17 @@ let paladinprotection = [
             1: 'Hurls a holy shield at the enemy, dealing 494 to 602 Holy damage, dazing them and then jumping to nearby enemies. Affects 3 total targets. Lasts 6 sec.'
         },
         isTalent: false,
-        addRequirement:  function () { return "Requires 1 points in Holy Shield" }
+        addRequirement:  function () { 
+            
+            if(paladinprotection[25].pointSpent != paladinprotection[25].pointLimit) {
+                
+                return `Requires ${paladinprotection[25].pointLimit - paladinprotection[25].pointSpent} points in Holy Shield`;
+                
+            } else {
+    
+                return "";
+            } 
+         }
 
 
 

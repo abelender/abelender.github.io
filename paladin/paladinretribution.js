@@ -379,7 +379,17 @@ let paladinretribution = [
             5: "Gives you a 5% bonus to Physical and Holy damage you deal for 15 sec after dealing a critical strike from a weapon swing, spell or ability. This effect stacks up to 3 times"
         },
         isTalent: false,
-        addRequirement: function () { return "Requires 5 points in Conviction" }
+        addRequirement:  function () { 
+            
+            if(paladinretribution[9].pointSpent != paladinretribution[9].pointLimit) {
+                
+                return `Requires ${paladinretribution[9].pointLimit - paladinretribution[9].pointSpent} points in Conviction`;
+                
+            } else {
+    
+                return "";
+            } 
+         }
 
 
         

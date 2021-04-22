@@ -465,10 +465,6 @@ let paladinHoly = [
 
                 return "";
             } }
-
-
-
-
     },
 
     {

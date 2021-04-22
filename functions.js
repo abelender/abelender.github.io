@@ -371,6 +371,9 @@ function checkForEnable (specobject, spanPoints, divTalentTree) {
     }
 
     spanPoints.textContent = parseInt(lineSum[0]);
+    console.clear();
+    console.log(isLineEnable);
+    console.log(lineSum);
 
 }
 
