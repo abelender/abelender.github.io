@@ -294,9 +294,8 @@ function checkForEnable (specobject, spanPoints, divTalentTree) {
     let isLineEnable = [undefined, true, false, false, false, false, false, false, false, false];
     let lineSum = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     let row = 1;
+ 
 
-
-    
     while(row < 10){
 
         for(let prop in specobject){
@@ -305,24 +304,32 @@ function checkForEnable (specobject, spanPoints, divTalentTree) {
                 lineSum[row] += specobject[prop].pointSpent;
             }
 
-            if(spanPoints.textContent >= (5 * row)) {
+            if(lineSum[row] >= 5) {
                 isLineFive[row] = true;
             } else {
                 isLineFive[row] = false;
             }
 
-            if(isLineFive[row] === true) {
-                isLineEnable[row + 1] = true;
-            } else {
-                isLineEnable[row + 1] = false;
-            }
+            // if(isLineFive[row] === true || spanPoints.textContent >= (5 * row)) {
+            //     isLineEnable[row + 1] = true;
+            // } else {
+            //     isLineEnable[row + 1] = false;
+            // }
+
+            if(sumPointsUntilLine(lineSum, row) >= (5 * row)) {
+                    isLineEnable[row + 1] = true;
+                } else {
+                    isLineEnable[row + 1] = false;
+                }
+
 
         }
 
+
         for(let prop in specobject) {
             if(specobject[prop].lineNumber === row + 1) {
-                if(isLineEnable[row + 1] === true) {
-                    specobject[prop].isEnable = true;
+                if(isLineEnable[row + 1] === true && specobject[prop].addRequirement() === "" ) {
+                    specobject[prop].isEnable = true;   
                 } else {
                     specobject[prop].isEnable = false;
 
@@ -338,8 +345,6 @@ function checkForEnable (specobject, spanPoints, divTalentTree) {
         for(i = row; i <= 9; i++) {
             lineSum[0] += lineSum[i];
         }
-
-        console.log(lineSum);
 
         row++;
     }
@@ -362,7 +367,6 @@ function checkForEnable (specobject, spanPoints, divTalentTree) {
             }
             control += 1;
         }
-
 
     }
 
@@ -397,9 +401,10 @@ function divTalentInfo (spec, specobject, prop, spanName, spanRank, spanText1, n
                 spanBottom.style.color = 'red';
                 spanBottom.textContent = `Requires ${specobject[prop].lineNumber * 5 - 5} points in ` + spec;
                 
-                if(specobject[prop].addRequirement !== undefined) {   
-                    spanBottomAdd.textContent = specobject[prop].addRequirement();
-                }
+            }
+
+            if(specobject[prop].addRequirement !== undefined) {   
+                spanBottomAdd.textContent = specobject[prop].addRequirement();
             }
 
         }
@@ -434,17 +439,13 @@ function divTalentInfo (spec, specobject, prop, spanName, spanRank, spanText1, n
     }
 }
 
-function sumLine (array, index) {
+function sumPointsUntilLine (array, row) {
+    let sum = 0;
 
-    let value = 0;
-    
-    for(i = index; i >= 0; i--) {
-        value += array[index];
+    for(i = row; i >= 1; i--) {
+        sum += array[i];
     }
 
-    console.log(value);
+    return sum;
 
-
-    return value;
 }
-
