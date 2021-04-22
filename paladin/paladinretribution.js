@@ -343,7 +343,17 @@ let paladinretribution = [
             2: "The amount of damage caused by targets affected by Sanctity Aura is increased by 2%."
         },
         isTalent: false,
-        addRequirement: function () { return "Requires 1 points in Sanctity Aura" }
+        addRequirement:  function () { 
+            
+            if(paladinretribution[18].pointSpent != paladinretribution[18].pointLimit) {
+                
+                return `Requires ${paladinretribution[18].pointLimit - paladinretribution[18].pointSpent} points in Sanctity Aura`;
+                
+            } else {
+    
+                return "";
+            } 
+         }
 
 
         
@@ -527,7 +537,17 @@ let paladinretribution = [
             5: "Increases the critical strike chance of all Judgements capable of a critical hit by 15% and reduces threat caused by all actions by 30% except when under the effects of Righteous Fury."
         },
         isTalent: false,
-        addRequirement: function () { return "Requires 1 points in Repentance" }
+        addRequirement:  function () { 
+            
+            if(paladinretribution[25].pointSpent != paladinretribution[25].pointLimit) {
+                
+                return `Requires ${paladinretribution[25].pointLimit - paladinretribution[25].pointSpent} points in Repentance`;
+                
+            } else {
+    
+                return "";
+            } 
+         }
 
 
         

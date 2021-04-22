@@ -310,12 +310,6 @@ function checkForEnable (specobject, spanPoints, divTalentTree) {
                 isLineFive[row] = false;
             }
 
-            // if(isLineFive[row] === true || spanPoints.textContent >= (5 * row)) {
-            //     isLineEnable[row + 1] = true;
-            // } else {
-            //     isLineEnable[row + 1] = false;
-            // }
-
             if(sumPointsUntilLine(lineSum, row) >= (5 * row)) {
                     isLineEnable[row + 1] = true;
                 } else {
@@ -450,5 +444,9 @@ function sumPointsUntilLine (array, row) {
     }
 
     return sum;
+
+}
+
+function sharedLink () {
 
 }
