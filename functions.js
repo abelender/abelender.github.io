@@ -463,17 +463,28 @@ function sharedLink (classname, divGlobalWrapper) {
         divLinkButton.className = 'divlinkbuttom';
         divLinkButton.textContent = 'Share:';
     
-    let spanLink = document.createElement('span');
+    let spanLink = document.createElement('input');
         spanLink.className = 'spanlink';
         spanLink.textContent = '/' + classname + '/';
 
+    let buttonLink = document.createElement('button');
+        buttonLink.className = 'buttonlink';
+        buttonLink.textContent = 'Enter';
+
     divLink.appendChild(divLinkButton);
     divLink.appendChild(spanLink);
+    divLink.appendChild(buttonLink);
 
     divGlobalWrapper.appendChild(divLink);
 
 }
 
 function talentChainBuilder () {
-        
+
+    for(i = 0; i <= 35; i++) {
+        if(specobject[prop].name !== undefined) {   
+
+        }
+
+    }
 }
