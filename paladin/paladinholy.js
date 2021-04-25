@@ -1,4 +1,4 @@
-let paladinHoly = [
+let paladinholy = [
     
     {   
         name: undefined,

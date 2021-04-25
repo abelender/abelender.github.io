@@ -9,6 +9,14 @@ body {
     background-color: #4e3d42;
 }
 
+.global-wrapper {
+    /* display: contents; */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center ;
+}
+
 .class-icon-wrapper{
     display: flex;
     flex-direction: row;
@@ -18,7 +26,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    margin: 4px;
+    margin: 10px;
 }
 
 .span-navbar {
@@ -30,8 +38,7 @@ body {
 }
 
 .global-span-points-wrapper {
-    display: flex;
-    flex-direction: row;
+    display: inline-block;
     font-size: 0.9em;
     font-weight: 700;
     font-family: MedievalSharp, monospace;
@@ -39,12 +46,13 @@ body {
     border-radius: 0.5em;
     padding: 4px;
     background-color: black;
-    color: white;
+    color: rgb(211, 182, 162);
+    width: fit-content;
+    justify-content: space-around
+
+
+
 }
-
-/* .label-global-span-points {
-
-} */
 
 .span-global-span-points {
     margin-left: 3px;
@@ -256,4 +264,34 @@ body {
     font-family: Montserrat, monospace;
     margin-top: 7px;
     font-weight: normal;
+}
+
+.divlink {
+    display: inline-block;
+    flex-direction: row;
+    font-size: 0.9em;
+    font-weight: 700;
+    font-family: MedievalSharp, monospace;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    padding: 4px;
+    background-color: black;
+    color: rgb(211, 182, 162);
+    margin-left: 20px;
+    width: fit-content;
+
+
+}
+
+.divlinkbuttom {
+    display: inline-block;
+
+}
+
+.spanlink {
+    background-color: #31282c;
+    border-radius: 0.2em;
+    margin-left: 5px;
+    width: 300px;
+    padding: 3px;
 }

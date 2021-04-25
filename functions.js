@@ -1,6 +1,6 @@
 let globalTalentLimit = 0;
 
-function talentTreeBuilder (specobject, backgroundImage, spec, headericon) {
+function talentTreeBuilder (specobject, backgroundImage, spec, headericon, divTalentTreeWrapper) {
     
     
     let divTalentTreeHeader = document.createElement('div');
@@ -180,7 +180,12 @@ function classIconNavBuilder (classicon) {
 
 
             div.addEventListener('click', function(ev) { 
-                createPaladin();}, false);
+            
+
+                        createPaladin();
+
+
+               }, false);
 
                 divClassIconWrapper.appendChild(div);
 
@@ -189,10 +194,11 @@ function classIconNavBuilder (classicon) {
         document.body.appendChild(divClassIconWrapper);
 }
 
-function globalSpanPoints() {
+function globalSpanPoints(divGlobalWrapper) {
 
     let divGlobalSpanPointsWrapper = document.createElement('div');
         divGlobalSpanPointsWrapper.className = 'global-span-points-wrapper';
+        divGlobalSpanPointsWrapper.id = 'globalspanpoints';
 
     let labelGlobalSpanPoints = document.createElement('label');
         labelGlobalSpanPoints.className = 'label-global-span-points';
@@ -206,7 +212,7 @@ function globalSpanPoints() {
         divGlobalSpanPointsWrapper.appendChild(spanGlobalSpanPoints);
   
 
-        document.body.appendChild(divGlobalSpanPointsWrapper);
+        divGlobalWrapper.appendChild(divGlobalSpanPointsWrapper);
 
 }
 
@@ -447,6 +453,27 @@ function sumPointsUntilLine (array, row) {
 
 }
 
-function sharedLink () {
+function sharedLink (classname, divGlobalWrapper) {
 
+    let divLink = document.createElement('div');
+        divLink.className = 'divlink';
+        divLink.id = 'divlink';
+
+    let divLinkButton = document.createElement('div');
+        divLinkButton.className = 'divlinkbuttom';
+        divLinkButton.textContent = 'Share:';
+    
+    let spanLink = document.createElement('span');
+        spanLink.className = 'spanlink';
+        spanLink.textContent = '/' + classname + '/';
+
+    divLink.appendChild(divLinkButton);
+    divLink.appendChild(spanLink);
+
+    divGlobalWrapper.appendChild(divLink);
+
+}
+
+function talentChainBuilder () {
+        
 }
