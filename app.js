@@ -3,6 +3,9 @@ classIconNavBuilder(classIcons);
 
 function createPaladin () {    
     
+    changeURL();
+    
+    
     if(document.getElementById('globalwrapper')) {
 
         document.getElementById('globalwrapper').remove();
@@ -78,5 +81,16 @@ function createDruid () {
                     'https://wow.zamimg.com/images/wow/icons/large/spell_holy_auraoflight.jpg');
 
     document.body.appendChild(divTalentTreeWrapper);
+
+}
+
+function changeURL() {
+   
+    // var theURL = window.location.pathname;
+    // theURL.replace("/url_part_to_change/", "/new_url_part/");
+    // //Set URL
+    // location.href = theURL;
+
+    console.log(window.location.pathname);
 
 }
