@@ -10,11 +10,11 @@ body {
 }
 
 .global-wrapper {
-    /* display: contents; */
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    text-align: center ;
+    /* text-align: center ; */
 }
 
 .class-icon-wrapper{
@@ -49,9 +49,6 @@ body {
     color: whitesmoke;
     width: fit-content;
     justify-content: space-around;
-
-
-
 }
 
 .span-global-span-points {
@@ -200,6 +197,49 @@ body {
 
 }
 
+
+
+.divlink {
+    display: inline-block;
+    flex-direction: row;
+    font-size: 0.9em;
+    font-weight: 700;
+    font-family: MedievalSharp, monospace;
+    border: 1px solid black;
+    border-radius: 0.5em;
+    padding: 4px;
+    background-color: black;
+    color: whitesmoke;
+    margin-left: 20px;
+    width: fit-content;
+
+
+}
+
+.divlinkbuttom {
+    display: inline-block;
+
+}
+
+.spanlink {
+    background-color: #31282c;
+    border-radius: 0.2em;
+    margin-left: 5px;
+    width: 300px;
+    padding: 3px;
+    color: whitesmoke;
+}
+
+.buttonlink {
+    background-color: #31282c;
+    border-radius: 0.2em;
+    margin-left: 5px;
+    font-family: MedievalSharp, monospace;
+    width: 50px;
+    padding: 3px;
+    color: whitesmoke;
+}
+
 .info-div-to-display {
     
     transform: none;
@@ -264,45 +304,4 @@ body {
     font-family: Montserrat, monospace;
     margin-top: 7px;
     font-weight: normal;
-}
-
-.divlink {
-    display: inline-block;
-    flex-direction: row;
-    font-size: 0.9em;
-    font-weight: 700;
-    font-family: MedievalSharp, monospace;
-    border: 1px solid black;
-    border-radius: 0.5em;
-    padding: 4px;
-    background-color: black;
-    color: whitesmoke;
-    margin-left: 20px;
-    width: fit-content;
-
-
-}
-
-.divlinkbuttom {
-    display: inline-block;
-
-}
-
-.spanlink {
-    background-color: #31282c;
-    border-radius: 0.2em;
-    margin-left: 5px;
-    width: 300px;
-    padding: 3px;
-    color: whitesmoke;
-}
-
-.buttonlink {
-    background-color: #31282c;
-    border-radius: 0.2em;
-    margin-left: 5px;
-    font-family: MedievalSharp, monospace;
-    width: 50px;
-    padding: 3px;
-    color: whitesmoke;
 }
