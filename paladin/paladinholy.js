@@ -12,9 +12,6 @@ let paladinholy = [
         },
         isTalent: false,
         addRequirement: function() { return ""}
-
-
-
         
     },
     
@@ -311,9 +308,9 @@ let paladinholy = [
         isTalent: true,
         addRequirement: function () { 
 
-            if(paladinHoly[13].pointSpent != paladinHoly[13].pointLimit) {
+            if(paladinholy[13].pointSpent != paladinholy[13].pointLimit) {
                 
-                return `Requires ${paladinHoly[13].pointLimit - paladinHoly[13].pointSpent} points in Illumination`;
+                return `Requires ${paladinholy[13].pointLimit - paladinholy[13].pointSpent} points in Illumination`;
                 
             } else {
 
@@ -457,9 +454,9 @@ let paladinholy = [
         },
         isTalent: false,
         addRequirement: function () { 
-            if(paladinHoly[17].pointSpent != paladinHoly[17].pointLimit) {
+            if(paladinholy[17].pointSpent != paladinholy[17].pointLimit) {
                 
-                return `Requires ${paladinHoly[17].pointLimit - paladinHoly[17].pointSpent} points in Divine Favor`;
+                return `Requires ${paladinholy[17].pointLimit - paladinholy[17].pointSpent} points in Divine Favor`;
                 
             } else {
 

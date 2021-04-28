@@ -2,27 +2,27 @@ classIconNavBuilder(classIcons);
 
 
 function createPaladin () {    
-    
-    changeURL();
-    
-    
+
     if(document.getElementById('globalwrapper')) {
 
         document.getElementById('globalwrapper').remove();
 
-        for(let prop in paladinholy){
+        for(i = 0; i <= 35; i++){
 
-            if(paladinholy[prop].name !== undefined) {
-    
-               paladinholy[prop].pointSpent = 0;
-               paladinprotection[prop].pointSpent = 0;
-               paladinretribution[prop].pointSpent = 0;
+            if(paladinholy[i].name !== undefined) {
+               paladinholy[i].pointSpent = 0;
+            }
+
+            if(paladinprotection[i].name !== undefined) {
+                paladinprotection[i].pointSpent = 0;
+            }
+
+            if(paladinretribution[i].name !== undefined) {
+                paladinretribution[i].pointSpent = 0;
             }
             
         }
-
         globalTalentLimit = 0
-        // updateGlobalSpanPoints();
     }
     
     let divGlobalWrapper = document.createElement('div');
@@ -34,7 +34,7 @@ function createPaladin () {
         divTalentTreeWrapper.id = "treewrapper"; 
 
      globalSpanPoints(divGlobalWrapper);
-     sharedLink("paladin", divGlobalWrapper);
+     sharedLink( changeURL('paladin'), divGlobalWrapper);
 
 
     talentTreeBuilder(paladinholy, 
@@ -57,7 +57,7 @@ function createPaladin () {
     divGlobalWrapper.appendChild(divTalentTreeWrapper);                
     document.body.appendChild(divGlobalWrapper);
 
-
+  
 
 }
 
@@ -84,13 +84,12 @@ function createDruid () {
 
 }
 
-function changeURL() {
+function changeURL(classname) {
    
-    // var theURL = window.location.pathname;
-    // theURL.replace("/url_part_to_change/", "/new_url_part/");
-    // //Set URL
-    // location.href = theURL;
+    let url = new URL(window.location.href);
+    console.log(url);
+    
+    url.searchParams.append('class', classname);
 
-    console.log(window.location.pathname);
-
+    return url;
 }

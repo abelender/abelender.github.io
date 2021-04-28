@@ -465,7 +465,7 @@ function sharedLink (classname, divGlobalWrapper) {
     
     let spanLink = document.createElement('input');
         spanLink.className = 'spanlink';
-        spanLink.textContent = '/' + classname + '/';
+        spanLink.value = classname;
 
     let buttonLink = document.createElement('button');
         buttonLink.className = 'buttonlink';
@@ -479,12 +479,16 @@ function sharedLink (classname, divGlobalWrapper) {
 
 }
 
-function talentChainBuilder () {
+// function talentChainBuilder () {
 
-    for(i = 0; i <= 35; i++) {
-        if(specobject[prop].name !== undefined) {   
+//     for(i = 0; i <= 35; i++) {
+//         if(specobject[prop].name !== undefined) {   
 
-        }
+//         }
 
-    }
+//     }
+// }
+
+function pageRedirection () {
+    
 }
