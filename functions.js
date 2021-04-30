@@ -1,6 +1,10 @@
 let globalTalentLimit = 0;
+let talentControlA = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+let talentControlB = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+let talentControlC = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
-function talentTreeBuilder (specobject, backgroundImage, spec, headericon, divTalentTreeWrapper) {
+
+function talentTreeBuilder (specobject, backgroundImage, spec, headericon, divTalentTreeWrapper, treeType) {
     
     
     let divTalentTreeHeader = document.createElement('div');
@@ -27,6 +31,7 @@ function talentTreeBuilder (specobject, backgroundImage, spec, headericon, divTa
 
     let divTalentTree = document.createElement('div');
         divTalentTree.className = 'talent-tree';
+        divTalentTree.id = treeType;
 
     let divTalentTreeBG = document.createElement('div');
         divTalentTreeBG.className = 'talent-tree-background';
@@ -181,9 +186,14 @@ function classIconNavBuilder (classicon) {
 
             div.addEventListener('click', function(ev) { 
             
+                let url = new URL(window.location.href);
+
+    
+                if(url.searchParams.get('class') == 'paladin' || url.searchParams.get('class') == null) {
+            
 
                         createPaladin();
-
+                }
 
                }, false);
 
@@ -233,6 +243,8 @@ function addTalentPoint(ev, span, specobject, prop, spanPoints, divTalentTree) {
             checkForEnable(specobject, spanPoints, divTalentTree);
             globalTalentLimit++;
             updateGlobalSpanPoints();
+
+            console.log(divTalentTree);
 
 
     }
@@ -318,15 +330,16 @@ function checkForEnable (specobject, spanPoints, divTalentTree) {
 
             if(sumPointsUntilLine(lineSum, row) >= (5 * row)) {
                     isLineEnable[row + 1] = true;
-                } else {
+            } else {
                     isLineEnable[row + 1] = false;
-                }
+            }
 
 
         }
 
 
         for(let prop in specobject) {
+
             if(specobject[prop].lineNumber === row + 1) {
                 if(isLineEnable[row + 1] === true && specobject[prop].addRequirement() === "" ) {
                     specobject[prop].isEnable = true;   
@@ -366,14 +379,31 @@ function checkForEnable (specobject, spanPoints, divTalentTree) {
                     talentSpan[control].textContent = `${specobject[prop].pointSpent}/${specobject[prop].pointLimit}`;
             }
             control += 1;
+
+            if(divTalentTree.id == 'A') {
+                talentControlA[prop] = specobject[prop].pointSpent;
+            }
+
+            if(divTalentTree.id == 'B') {
+                talentControlB[prop] = specobject[prop].pointSpent;
+
+            }
+
+            if(divTalentTree.id == 'C') {
+                talentControlC[prop] = specobject[prop].pointSpent;
+
+            }
+
         }
 
     }
 
     spanPoints.textContent = parseInt(lineSum[0]);
     console.clear();
-    console.log(isLineEnable);
-    console.log(lineSum);
+    console.log(talentControlA);
+    console.log(talentControlB);
+    console.log(talentControlC);
+    
 
 }
 
@@ -489,6 +519,18 @@ function sharedLink (classname, divGlobalWrapper) {
 //     }
 // }
 
-function pageRedirection () {
-    
-}
+// function getUrlParameter(sParam) {
+//     var sPageURL = window.location.search.substring(1),
+//         sURLVariables = sPageURL.split('&'),
+//         sParameterName,
+//         i;
+
+//     for (i = 0; i < sURLVariables.length; i++) {
+//         sParameterName = sURLVariables[i].split('=');
+
+//         if (sParameterName[0] === sParam) {
+//             return typeof sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+//         }
+//     }
+//     return false;
+// };

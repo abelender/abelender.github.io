@@ -1,7 +1,18 @@
 classIconNavBuilder(classIcons);
 
+let url = new URL(window.location.href);
+if(url.searchParams.get('class') == 'paladin') {
+            
+
+    createPaladin();
+}
+
+
+
 
 function createPaladin () {    
+
+    // let url = (new URL(document.location.href));
 
     if(document.getElementById('globalwrapper')) {
 
@@ -34,62 +45,60 @@ function createPaladin () {
         divTalentTreeWrapper.id = "treewrapper"; 
 
      globalSpanPoints(divGlobalWrapper);
-     sharedLink( changeURL('paladin'), divGlobalWrapper);
+     sharedLink( addClassToURL('paladin'), divGlobalWrapper);
+
+    // let url = new URL(window.location.href);
+
+    
+    // if(url.searchParams.get('class') == paladin) {
+     
+    //     console.log(url.searchParams.get('class'));
+
+        talentTreeBuilder(paladinholy, 
+                        'https://wallpapercave.com/wp/wp3449930.jpg', 
+                        'Holy', 
+                        'https://wow.zamimg.com/images/wow/icons/large/spell_holy_holybolt.jpg', divTalentTreeWrapper, 'A');
+
+        talentTreeBuilder(paladinprotection, 
+                        'https://static.icy-veins.com/images/classic/og-images/paladin.jpg', 
+                        'Protection', 
+                        'https://wow.zamimg.com/images/wow/icons/large/spell_nature_lightningshield.jpg', divTalentTreeWrapper, 'B');
+
+        talentTreeBuilder(paladinretribution, 
+                        'https://legacy-wow.com/images/default/paladin.jpg', 
+                        'Retribution', 
+                        'https://wow.zamimg.com/images/wow/icons/large/spell_holy_auraoflight.jpg', divTalentTreeWrapper, 'C');
 
 
-    talentTreeBuilder(paladinholy, 
-                    'https://wallpapercave.com/wp/wp3449930.jpg', 
-                    'Holy', 
-                    'https://wow.zamimg.com/images/wow/icons/large/spell_holy_holybolt.jpg', divTalentTreeWrapper);
 
-    talentTreeBuilder(paladinprotection, 
-                    'https://static.icy-veins.com/images/classic/og-images/paladin.jpg', 
-                    'Protection', 
-                    'https://wow.zamimg.com/images/wow/icons/large/spell_nature_lightningshield.jpg', divTalentTreeWrapper);
-
-    talentTreeBuilder(paladinretribution, 
-                    'https://legacy-wow.com/images/default/paladin.jpg', 
-                    'Retribution', 
-                    'https://wow.zamimg.com/images/wow/icons/large/spell_holy_auraoflight.jpg', divTalentTreeWrapper);
-
-
-
-    divGlobalWrapper.appendChild(divTalentTreeWrapper);                
-    document.body.appendChild(divGlobalWrapper);
-
+        divGlobalWrapper.appendChild(divTalentTreeWrapper);                
+        document.body.appendChild(divGlobalWrapper);
+    // }
   
 
 }
 
-function createDruid () {
 
-
-
-    talentTreeBuilder(paladinholy, 
-                    'https://wallpapercave.com/wp/wp3449930.jpg', 
-                    'Holy', 
-                    'https://wow.zamimg.com/images/wow/icons/large/spell_holy_holybolt.jpg');
-
-    talentTreeBuilder(paladinprotection, 
-                    'https://static.icy-veins.com/images/classic/og-images/paladin.jpg', 
-                    'Protection', 
-                    'https://wow.zamimg.com/images/wow/icons/large/spell_nature_lightningshield.jpg');
-
-    talentTreeBuilder(paladinretribution, 
-                    'https://legacy-wow.com/images/default/paladin.jpg', 
-                    'Retribution', 
-                    'https://wow.zamimg.com/images/wow/icons/large/spell_holy_auraoflight.jpg');
-
-    document.body.appendChild(divTalentTreeWrapper);
-
-}
-
-function changeURL(classname) {
+function addClassToURL(classname) {
    
     let url = new URL(window.location.href);
-    console.log(url);
-    
-    url.searchParams.append('class', classname);
+    let queryString = window.location.search;
+    let urlParams = new URLSearchParams(queryString);
 
+
+    if(urlParams.get('class') != null) {
+        url.searchParams.delete('class');
+    } else {
+        url.searchParams.set('class', classname);
+
+        
+    }
+
+    history.pushState(null, '', url.searchParams.set('class', classname));   
+
+    // window.location.href = url;
+    console.log('Esto es en la funcion: '+url.search);
     return url;
+
+
 }
