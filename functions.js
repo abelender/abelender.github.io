@@ -2,6 +2,8 @@ let globalTalentLimit = 0;
 let talentControlA = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 let talentControlB = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 let talentControlC = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+let parametersURL = undefined;
+let parameterURLSpanLink = undefined;
 
 
 function talentTreeBuilder (specobject, backgroundImage, spec, headericon, divTalentTreeWrapper, treeType) {
@@ -186,14 +188,8 @@ function classIconNavBuilder (classicon) {
 
             div.addEventListener('click', function(ev) { 
             
-                let url = new URL(window.location.href);
-
-    
-                if(url.searchParams.get('class') == 'paladin' || url.searchParams.get('class') == null) {
-            
-
+                        resetURL();
                         createPaladin();
-                }
 
                }, false);
 
@@ -244,9 +240,6 @@ function addTalentPoint(ev, span, specobject, prop, spanPoints, divTalentTree) {
             globalTalentLimit++;
             updateGlobalSpanPoints();
 
-            console.log(divTalentTree);
-
-
     }
     
     ev.preventDefault();    
@@ -293,6 +286,22 @@ function resetTalentTree (ev, specobject, spanPoints, divTalentTree) {
             
             if(control > 1) {
                 talentImages[control].className = "talent-img talent-img-disable";
+            }
+
+            if(divTalentTree.id == 'A') {
+                talentControlA[prop] = specobject[prop].pointSpent;
+                changeURLParameters('A')
+            }
+
+            if(divTalentTree.id == 'B') {
+                talentControlB[prop] = specobject[prop].pointSpent;
+                changeURLParameters('B')
+
+            }
+
+            if(divTalentTree.id == 'C') {
+                talentControlC[prop] = specobject[prop].pointSpent;
+                changeURLParameters('C')
             }
 
             control += 1;
@@ -382,16 +391,18 @@ function checkForEnable (specobject, spanPoints, divTalentTree) {
 
             if(divTalentTree.id == 'A') {
                 talentControlA[prop] = specobject[prop].pointSpent;
+                changeURLParameters('A')
             }
 
             if(divTalentTree.id == 'B') {
                 talentControlB[prop] = specobject[prop].pointSpent;
+                changeURLParameters('B')
 
             }
 
             if(divTalentTree.id == 'C') {
                 talentControlC[prop] = specobject[prop].pointSpent;
-
+                changeURLParameters('C')
             }
 
         }
@@ -399,11 +410,13 @@ function checkForEnable (specobject, spanPoints, divTalentTree) {
     }
 
     spanPoints.textContent = parseInt(lineSum[0]);
-    console.clear();
-    console.log(talentControlA);
-    console.log(talentControlB);
-    console.log(talentControlC);
-    
+
+    // console.clear();
+    // console.log(talentControlA);
+    // console.log(talentControlB);
+    // console.log(talentControlC);
+    // console.log(url);
+
 
 }
 
@@ -497,9 +510,12 @@ function sharedLink (classname, divGlobalWrapper) {
         spanLink.className = 'spanlink';
         spanLink.value = classname;
 
+        parameterURLSpanLink = spanLink;
+        parametersURL = classname;
+
     let buttonLink = document.createElement('button');
         buttonLink.className = 'buttonlink';
-        buttonLink.textContent = 'Enter';
+        buttonLink.textContent = 'Copy';
 
     divLink.appendChild(divLinkButton);
     divLink.appendChild(spanLink);
@@ -507,30 +523,69 @@ function sharedLink (classname, divGlobalWrapper) {
 
     divGlobalWrapper.appendChild(divLink);
 
+    // console.log(classname);
+
 }
 
-// function talentChainBuilder () {
+function changeURLParameters(type) {
 
-//     for(i = 0; i <= 35; i++) {
-//         if(specobject[prop].name !== undefined) {   
+    if(type == 'A') {
+        parametersURL.searchParams.set(type, talentControlA);
+    }
 
-//         }
+    if(type == 'B') {
+        parametersURL.searchParams.set(type, talentControlB);
+    }
 
-//     }
-// }
+    if(type == 'C') {
+        parametersURL.searchParams.set(type, talentControlC);
+    }
 
-// function getUrlParameter(sParam) {
-//     var sPageURL = window.location.search.substring(1),
-//         sURLVariables = sPageURL.split('&'),
-//         sParameterName,
-//         i;
+    parameterURLSpanLink.value = parametersURL;
+}
 
-//     for (i = 0; i < sURLVariables.length; i++) {
-//         sParameterName = sURLVariables[i].split('=');
+function buildTree (divTalentTreeWrapper, url) {
 
-//         if (sParameterName[0] === sParam) {
-//             return typeof sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-//         }
-//     }
-//     return false;
-// };
+    let y = 0;
+    
+    for(i=0; i <= url.searchParams.get('A').length; i += 2) {
+       talentControlA[y] = url.searchParams.get('A')[i];
+       talentControlB[y] = url.searchParams.get('B')[i];
+       talentControlC[y] = url.searchParams.get('C')[i];
+    
+       y += 1;
+
+    }
+
+
+    for(let i=0; i<=35; i++) {
+
+        if(talentControlA[i] > 0) {
+            for(z=0; z < talentControlA[i]; z++) {
+                setTimeout(function(){ $(divTalentTreeWrapper).children('#A').find('.talent-div')[i].click()}, 100);
+                console.log($(divTalentTreeWrapper).children('#A').find('.talent-div')[i]);
+            }
+        }
+
+        if(talentControlB[i] > 0) {
+            for(z=0; z < talentControlB[i]; z++) {
+                setTimeout(function(){ $(divTalentTreeWrapper).children('#B').find('.talent-div')[i].click()}, 100);
+            }
+        }
+
+        if(talentControlC[i] > 0) {
+            for(z=0; z < talentControlC[i]; z++) {
+                setTimeout(function(){ $(divTalentTreeWrapper).children('#C').find('.talent-div')[i].click()}, 100);
+                console.log($(divTalentTreeWrapper).children('#C').find('.talent-div')[i]);
+            }
+        }
+
+    }
+    
+
+}
+
+function resetURL() {
+    baseUrl = window.location.href.split("?")[0];
+    window.history.pushState('name', '', baseUrl);
+}

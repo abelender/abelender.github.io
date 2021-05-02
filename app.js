@@ -1,8 +1,10 @@
 classIconNavBuilder(classIcons);
 
 let url = new URL(window.location.href);
+
 if(url.searchParams.get('class') == 'paladin') {
-            
+    
+
 
     createPaladin();
 }
@@ -11,8 +13,6 @@ if(url.searchParams.get('class') == 'paladin') {
 
 
 function createPaladin () {    
-
-    // let url = (new URL(document.location.href));
 
     if(document.getElementById('globalwrapper')) {
 
@@ -44,15 +44,11 @@ function createPaladin () {
         divTalentTreeWrapper.className = 'talent-tree-wrapper';
         divTalentTreeWrapper.id = "treewrapper"; 
 
+
+
      globalSpanPoints(divGlobalWrapper);
      sharedLink( addClassToURL('paladin'), divGlobalWrapper);
 
-    // let url = new URL(window.location.href);
-
-    
-    // if(url.searchParams.get('class') == paladin) {
-     
-    //     console.log(url.searchParams.get('class'));
 
         talentTreeBuilder(paladinholy, 
                         'https://wallpapercave.com/wp/wp3449930.jpg', 
@@ -73,8 +69,16 @@ function createPaladin () {
 
         divGlobalWrapper.appendChild(divTalentTreeWrapper);                
         document.body.appendChild(divGlobalWrapper);
-    // }
-  
+
+        let url = new URL(window.location.href);
+
+        if(url.searchParams.get('class') == 'paladin') {
+            
+            buildTree(divTalentTreeWrapper, url);
+
+        }
+
+        
 
 }
 
@@ -82,22 +86,19 @@ function createPaladin () {
 function addClassToURL(classname) {
    
     let url = new URL(window.location.href);
+
     let queryString = window.location.search;
     let urlParams = new URLSearchParams(queryString);
 
 
     if(urlParams.get('class') != null) {
-        url.searchParams.delete('class');
-    } else {
+        urlParams.delete('class');
+    } 
         url.searchParams.set('class', classname);
+        url.searchParams.set('A', talentControlA);
+        url.searchParams.set('B', talentControlB);
+        url.searchParams.set('C', talentControlC);
 
-        
-    }
-
-    history.pushState(null, '', url.searchParams.set('class', classname));   
-
-    // window.location.href = url;
-    console.log('Esto es en la funcion: '+url.search);
     return url;
 
 
