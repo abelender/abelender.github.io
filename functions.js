@@ -509,6 +509,7 @@ function sharedLink (classname, divGlobalWrapper) {
     let spanLink = document.createElement('input');
         spanLink.className = 'spanlink';
         spanLink.value = classname;
+        spanLink.id = "myInput";
 
         parameterURLSpanLink = spanLink;
         parametersURL = classname;
@@ -516,6 +517,16 @@ function sharedLink (classname, divGlobalWrapper) {
     let buttonLink = document.createElement('button');
         buttonLink.className = 'buttonlink';
         buttonLink.textContent = 'Copy';
+        buttonLink.onclick = function() {
+            let copyText = document.getElementById("myInput");
+
+            /* Select the text field */
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+          
+            /* Copy the text inside the text field */
+            document.execCommand("copy");
+        }
 
     divLink.appendChild(divLinkButton);
     divLink.appendChild(spanLink);
