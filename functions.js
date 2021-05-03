@@ -520,11 +520,9 @@ function sharedLink (classname, divGlobalWrapper) {
         buttonLink.onclick = function() {
             let copyText = document.getElementById("myInput");
 
-            /* Select the text field */
             copyText.select();
-            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+            copyText.setSelectionRange(0, 99999);
           
-            /* Copy the text inside the text field */
             document.execCommand("copy");
         }
 
