@@ -411,13 +411,6 @@ function checkForEnable (specobject, spanPoints, divTalentTree) {
 
     spanPoints.textContent = parseInt(lineSum[0]);
 
-    // console.clear();
-    // console.log(talentControlA);
-    // console.log(talentControlB);
-    // console.log(talentControlC);
-    // console.log(url);
-
-
 }
 
 function divTalentInfo (spec, specobject, prop, spanName, spanRank, spanText1, nextrank, spanText2, spanBottom, spanBottomAdd) {
@@ -531,8 +524,6 @@ function sharedLink (classname, divGlobalWrapper) {
     divLink.appendChild(buttonLink);
 
     divGlobalWrapper.appendChild(divLink);
-
-    // console.log(classname);
 
 }
 
