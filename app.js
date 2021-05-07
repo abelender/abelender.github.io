@@ -123,19 +123,19 @@ function createDruid () {
 
 
         talentTreeBuilder(druidbalance, 
-                        'https://wallpapercave.com/wp/wp3449930.jpg', 
-                        'Holy', 
-                        'https://wow.zamimg.com/images/wow/icons/large/spell_holy_holybolt.jpg', divTalentTreeWrapper, 'A');
+                        'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d502015c-36dd-49db-ba9d-9282d94d795a/db2i6k2-15620ca8-b438-41b9-847f-86bf0b675e1d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Q1MDIwMTVjLTM2ZGQtNDlkYi1iYTlkLTkyODJkOTRkNzk1YVwvZGIyaTZrMi0xNTYyMGNhOC1iNDM4LTQxYjktODQ3Zi04NmJmMGI2NzVlMWQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.3-NcH41QoewdDuV97kk5ejjl-gumR-rnLla8ZWCs9aM', 
+                        'Balance', 
+                        'https://wow.zamimg.com/images/wow/icons/large/spell_nature_starfall.jpg', divTalentTreeWrapper, 'A');
 
         talentTreeBuilder(druidferal, 
-                        'https://static.icy-veins.com/images/classic/og-images/paladin.jpg', 
-                        'Protection', 
-                        'https://wow.zamimg.com/images/wow/icons/large/spell_nature_lightningshield.jpg', divTalentTreeWrapper, 'B');
+                        'https://cdnb.artstation.com/p/assets/images/images/027/550/751/large/ilya-generalov-pixiedust.jpg?1591853187', 
+                        'Feral', 
+                        'https://wow.zamimg.com/images/wow/icons/large/ability_racial_bearform.jpg', divTalentTreeWrapper, 'B');
 
         talentTreeBuilder(druidrestoration, 
-                        'https://legacy-wow.com/images/default/paladin.jpg', 
-                        'Retribution', 
-                        'https://wow.zamimg.com/images/wow/icons/large/spell_holy_auraoflight.jpg', divTalentTreeWrapper, 'C');
+                        'https://worldofhealcraft.files.wordpress.com/2014/10/tree-of-life-2.jpg', 
+                        'Restoration', 
+                        'https://wow.zamimg.com/images/wow/icons/large/spell_nature_healingtouch.jpg', divTalentTreeWrapper, 'C');
 
 
 
