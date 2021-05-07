@@ -188,8 +188,16 @@ function classIconNavBuilder (classicon) {
 
             div.addEventListener('click', function(ev) { 
             
-                        resetURL();
-                        createPaladin();
+                if(spanHeader.textContent == 'Paladin') {
+                    resetURL();
+                    createPaladin();
+                }
+
+                if(spanHeader.textContent == 'Druid') {
+                    resetURL();
+                    createDruid();
+                }
+                       
 
                }, false);
 
