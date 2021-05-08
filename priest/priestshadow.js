@@ -1,4 +1,4 @@
-let huntersurvival = [
+let priestshadow = [
 
     {   
         name: undefined,

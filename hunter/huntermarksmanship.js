@@ -5,7 +5,7 @@ let huntermarksmanship = [
         src: undefined,
         pointSpent: undefined,
         pointLimit: undefined,
-        isEnable: false,
+        isEnable: true,
         lineNumber: 1,
         rankText: {
 
@@ -20,7 +20,7 @@ let huntermarksmanship = [
         src: undefined,
         pointSpent: undefined,
         pointLimit: undefined,
-        isEnable: false,
+        isEnable: true,
         lineNumber: 1,
         rankText: {
 
@@ -35,7 +35,7 @@ let huntermarksmanship = [
         src: undefined,
         pointSpent: undefined,
         pointLimit: undefined,
-        isEnable: false,
+        isEnable: true,
         lineNumber: 1,
         rankText: {
 
@@ -50,7 +50,7 @@ let huntermarksmanship = [
         src: undefined,
         pointSpent: undefined,
         pointLimit: undefined,
-        isEnable: false,
+        isEnable: true,
         lineNumber: 1,
         rankText: {
 

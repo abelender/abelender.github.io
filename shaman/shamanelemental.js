@@ -1,4 +1,4 @@
-let huntersurvival = [
+let shamanelemental = [
 
     {   
         name: undefined,

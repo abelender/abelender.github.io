@@ -1,4 +1,4 @@
-let huntersurvival = [
+let magefrost = [
 
     {   
         name: undefined,

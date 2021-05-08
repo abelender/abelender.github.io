@@ -1,4 +1,4 @@
-let huntersurvival = [
+let warlockdemonology = [
 
     {   
         name: undefined,
