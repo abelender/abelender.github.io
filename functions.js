@@ -357,8 +357,8 @@ function checkForEnable (specobject, spanPoints, divTalentTree) {
 
         for(let prop in specobject) {
 
-            if(specobject[prop].lineNumber === row + 1) {
-                if(isLineEnable[row + 1] === true && specobject[prop].addRequirement() === "" ) {
+            if(specobject[prop].lineNumber === row) {
+                if(isLineEnable[row] === true && specobject[prop].addRequirement() === "" ) {
                     specobject[prop].isEnable = true;   
                 } else {
                     specobject[prop].isEnable = false;

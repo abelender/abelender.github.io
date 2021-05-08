@@ -251,7 +251,16 @@ let druidrestoration = [
 
         },
         isTalent: false,
-        addRequirement: function() { return ""}
+        addRequirement: function() {  
+            
+            if(druidrestoration[8].pointSpent != druidrestoration[8].pointLimit) {
+                
+            return `Requires ${druidrestoration[8].pointLimit - druidrestoration[8].pointSpent} points in 'Intensity'`;
+            
+        } else {
+
+            return "";
+        } }
      
     },
 
@@ -341,7 +350,16 @@ let druidrestoration = [
 
         },
         isTalent: false,
-        addRequirement: function() { return ""}
+        addRequirement: function() {  
+            
+            if(druidrestoration[14].pointSpent != druidrestoration[14].pointLimit) {
+                
+            return `Requires ${druidrestoration[14].pointLimit - druidrestoration[14].pointSpent} points in 'Improved Rejuvenation'`;
+            
+        } else {
+
+            return "";
+        } }
      
     },
 
@@ -386,7 +404,16 @@ let druidrestoration = [
 
         },
         isTalent: false,
-        addRequirement: function() { return ""}
+        addRequirement: function() {  
+            
+            if(druidrestoration[17].pointSpent != druidrestoration[17].pointLimit) {
+                
+            return `Requires ${druidrestoration[17].pointLimit - druidrestoration[17].pointSpent} points in 'Gift of Nature'`;
+            
+        } else {
+
+            return "";
+        } }
      
     },
 
@@ -506,7 +533,16 @@ let druidrestoration = [
 
         },
         isTalent: false,
-        addRequirement: function() { return ""}
+        addRequirement: function() {  
+            
+            if(druidrestoration[29].pointSpent != druidrestoration[29].pointLimit) {
+                
+            return `Requires ${druidrestoration[29].pointLimit - druidrestoration[29].pointSpent} points in 'Empowered Rejuvenation'`;
+            
+        } else {
+
+            return "";
+        } }
      
     },
 

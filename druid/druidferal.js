@@ -221,7 +221,16 @@ let druidferal = [
 
         },
         isTalent: false,
-        addRequirement: function() { return ""}
+        addRequirement: function() {  
+            
+            if(druidferal[10].pointSpent != druidferal[10].pointLimit) {
+                
+            return `Requires ${druidferal[10].pointLimit - druidferal[10].pointSpent} points in 'Sharpened Claws'`;
+            
+        } else {
+
+            return "";
+        } }
      
     },
 
@@ -326,7 +335,16 @@ let druidferal = [
 
         },
         isTalent: false,
-        addRequirement: function() { return ""}
+        addRequirement: function() {  
+            
+            if(druidferal[13].pointSpent != druidferal[13].pointLimit) {
+                
+            return `Requires ${druidferal[13].pointLimit - druidferal[13].pointSpent} points in 'Predatory Strikes'`;
+            
+        } else {
+
+            return "";
+        } }
      
     },
 
@@ -401,7 +419,16 @@ let druidferal = [
 
         },
         isTalent: false,
-        addRequirement: function() { return ""}
+        addRequirement: function() {  
+            
+            if(druidferal[25].pointSpent != druidferal[25].pointLimit) {
+                
+            return `Requires ${druidferal[25].pointLimit - druidferal[25].pointSpent} points in 'Leader of the Pack'`;
+            
+        } else {
+
+            return "";
+        } }
      
     },
 
@@ -506,7 +533,16 @@ let druidferal = [
 
         },
         isTalent: false,
-        addRequirement: function() { return ""}
+        addRequirement: function() {  
+            
+            if(druidferal[25].pointSpent != druidferal[25].pointLimit) {
+                
+            return `Requires ${druidferal[25].pointLimit - druidferal[25].pointSpent} points in 'Leader of the Pack'`;
+            
+        } else {
+
+            return "";
+        } }
      
     },
 

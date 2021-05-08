@@ -35,7 +35,7 @@ let druidbalance = [
         src: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_natureswrath.jpg',
         pointSpent: 0,
         pointLimit: 4,
-        isEnable: false,
+        isEnable: true,
         lineNumber: 1,
         rankText: {
 
@@ -215,7 +215,16 @@ let druidbalance = [
 
         },
         isTalent: false,
-        addRequirement: function() { return ""}
+        addRequirement: function() {  
+            
+            if(druidbalance[5].pointSpent != druidbalance[5].pointLimit) {
+                
+            return `Requires ${druidbalance[5].pointLimit - druidbalance[5].pointSpent} points in 'Focused Starlight'`;
+            
+        } else {
+
+            return "";
+        } }
      
     },
 
@@ -335,7 +344,16 @@ let druidbalance = [
 
         },
         isTalent: false,
-        addRequirement: function() { return ""}
+        addRequirement: function() {  
+            
+            if(druidbalance[17].pointSpent != druidbalance[17].pointLimit) {
+                
+            return `Requires ${druidbalance[17].pointLimit - druidbalance[17].pointSpent} points in 'Nature's Grace'`;
+            
+        } else {
+
+            return "";
+        } }
      
     },
 
