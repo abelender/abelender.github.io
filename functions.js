@@ -197,6 +197,11 @@ function classIconNavBuilder (classicon) {
                     resetURL();
                     createDruid();
                 }
+
+                if(spanHeader.textContent == 'Hunter') {
+                    resetURL();
+                    createHunter();
+                }
                        
 
                }, false);
