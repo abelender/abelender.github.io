@@ -224,6 +224,76 @@ function createHunter () {
 
 }
 
+function createMage () {    
+
+    if(document.getElementById('globalwrapper')) {
+
+        document.getElementById('globalwrapper').remove();
+
+        for(i = 0; i <= 35; i++){
+
+            if(magearcane[i].name !== undefined) {
+                magearcane[i].pointSpent = 0;
+            }
+
+            if(magefire[i].name !== undefined) {
+                magefire[i].pointSpent = 0;
+            }
+
+            if(magefrost[i].name !== undefined) {
+                magefrost[i].pointSpent = 0;
+            }
+            
+        }
+        globalTalentLimit = 0
+    }
+    
+    let divGlobalWrapper = document.createElement('div');
+        divGlobalWrapper.className = 'global-wrapper';
+        divGlobalWrapper.id = "globalwrapper"; 
+    
+    let divTalentTreeWrapper = document.createElement('div');
+        divTalentTreeWrapper.className = 'talent-tree-wrapper';
+        divTalentTreeWrapper.id = "treewrapper"; 
+
+
+
+     globalSpanPoints(divGlobalWrapper);
+     sharedLink( addClassToURL('mage'), divGlobalWrapper);
+
+
+        talentTreeBuilder(magearcane, 
+                        'https://www.warcrafttavern.com/tbc/tools/talent-calculator/img/81.eb205a84.png', 
+                        'Arcane', 
+                        'https://wow.zamimg.com/images/wow/icons/large/spell_holy_magicalsentry.jpg', divTalentTreeWrapper, 'A');
+
+        talentTreeBuilder(magefire, 
+                        'https://www.warcrafttavern.com/tbc/tools/talent-calculator/img/41.c5a0f5db.png', 
+                        'Fire', 
+                        'https://wow.zamimg.com/images/wow/icons/large/spell_fire_firebolt02.jpg', divTalentTreeWrapper, 'B');
+
+        talentTreeBuilder(magefrost, 
+                        'https://www.warcrafttavern.com/tbc/tools/talent-calculator/img/61.b742d948.png', 
+                        'Frost', 
+                        'https://wow.zamimg.com/images/wow/icons/large/spell_frost_frostbolt02.jpg', divTalentTreeWrapper, 'C');
+
+
+
+        divGlobalWrapper.appendChild(divTalentTreeWrapper);                
+        document.body.appendChild(divGlobalWrapper);
+
+        let url = new URL(window.location.href);
+
+        if(url.searchParams.get('class') == 'mage') {
+            
+            buildTree(divTalentTreeWrapper, url);
+
+        }
+
+        
+
+}
+
 
 function addClassToURL(classname) {
    

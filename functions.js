@@ -202,6 +202,11 @@ function classIconNavBuilder (classicon) {
                     resetURL();
                     createHunter();
                 }
+
+                if(spanHeader.textContent == 'Mage') {
+                    resetURL();
+                    createMage();
+                }
                        
 
                }, false);
