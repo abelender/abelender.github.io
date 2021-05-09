@@ -294,6 +294,356 @@ function createMage () {
 
 }
 
+function createPriest () {    
+
+    if(document.getElementById('globalwrapper')) {
+
+        document.getElementById('globalwrapper').remove();
+
+        for(i = 0; i <= 35; i++){
+
+            if(priestdiscipline[i].name !== undefined) {
+                priestdiscipline[i].pointSpent = 0;
+            }
+
+            if(priestholy[i].name !== undefined) {
+                priestholy[i].pointSpent = 0;
+            }
+
+            if(priestshadow[i].name !== undefined) {
+                priestshadow[i].pointSpent = 0;
+            }
+            
+        }
+        globalTalentLimit = 0
+    }
+    
+    let divGlobalWrapper = document.createElement('div');
+        divGlobalWrapper.className = 'global-wrapper';
+        divGlobalWrapper.id = "globalwrapper"; 
+    
+    let divTalentTreeWrapper = document.createElement('div');
+        divTalentTreeWrapper.className = 'talent-tree-wrapper';
+        divTalentTreeWrapper.id = "treewrapper"; 
+
+
+
+     globalSpanPoints(divGlobalWrapper);
+     sharedLink( addClassToURL('priest'), divGlobalWrapper);
+
+
+        talentTreeBuilder(priestdiscipline, 
+                        'https://www.warcrafttavern.com/tbc/tools/talent-calculator/img/201.b742c780.png', 
+                        'Discipline', 
+                        'https://wow.zamimg.com/images/wow/icons/large/spell_holy_powerwordshield.jpg', divTalentTreeWrapper, 'A');
+
+        talentTreeBuilder(priestholy, 
+                        'https://www.warcrafttavern.com/tbc/tools/talent-calculator/img/202.8fab87bf.png', 
+                        'Holy', 
+                        'https://wow.zamimg.com/images/wow/icons/large/spell_holy_guardianspirit.jpg', divTalentTreeWrapper, 'B');
+
+        talentTreeBuilder(priestshadow, 
+                        'https://www.warcrafttavern.com/tbc/tools/talent-calculator/img/203.77cf9ad3.png', 
+                        'Shadow', 
+                        'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowwordpain.jpg', divTalentTreeWrapper, 'C');
+
+
+
+        divGlobalWrapper.appendChild(divTalentTreeWrapper);                
+        document.body.appendChild(divGlobalWrapper);
+
+        let url = new URL(window.location.href);
+
+        if(url.searchParams.get('class') == 'priest') {
+            
+            buildTree(divTalentTreeWrapper, url);
+
+        }
+
+        
+
+}
+
+function createRogue () {    
+
+    if(document.getElementById('globalwrapper')) {
+
+        document.getElementById('globalwrapper').remove();
+
+        for(i = 0; i <= 35; i++){
+
+            if(rogueassassination[i].name !== undefined) {
+                rogueassassination[i].pointSpent = 0;
+            }
+
+            if(roguecombat[i].name !== undefined) {
+                roguecombat[i].pointSpent = 0;
+            }
+
+            if(roguesubtlety[i].name !== undefined) {
+                roguesubtlety[i].pointSpent = 0;
+            }
+            
+        }
+        globalTalentLimit = 0
+    }
+    
+    let divGlobalWrapper = document.createElement('div');
+        divGlobalWrapper.className = 'global-wrapper';
+        divGlobalWrapper.id = "globalwrapper"; 
+    
+    let divTalentTreeWrapper = document.createElement('div');
+        divTalentTreeWrapper.className = 'talent-tree-wrapper';
+        divTalentTreeWrapper.id = "treewrapper"; 
+
+
+
+     globalSpanPoints(divGlobalWrapper);
+     sharedLink( addClassToURL('rogue'), divGlobalWrapper);
+
+
+        talentTreeBuilder(rogueassassination, 
+                        'https://www.warcrafttavern.com/tbc/tools/talent-calculator/img/182.0c65eb99.png', 
+                        'Assassination', 
+                        'https://wow.zamimg.com/images/wow/icons/large/ability_rogue_eviscerate.jpg', divTalentTreeWrapper, 'A');
+
+        talentTreeBuilder(roguecombat, 
+                        'https://www.warcrafttavern.com/tbc/tools/talent-calculator/img/181.6bf66582.png', 
+                        'Combat', 
+                        'https://wow.zamimg.com/images/wow/icons/large/ability_backstab.jpg', divTalentTreeWrapper, 'B');
+
+        talentTreeBuilder(roguesubtlety, 
+                        'https://www.warcrafttavern.com/tbc/tools/talent-calculator/img/183.4e921c4e.png', 
+                        'Subtlety', 
+                        'https://wow.zamimg.com/images/wow/icons/large/ability_stealth.jpg', divTalentTreeWrapper, 'C');
+
+
+
+        divGlobalWrapper.appendChild(divTalentTreeWrapper);                
+        document.body.appendChild(divGlobalWrapper);
+
+        let url = new URL(window.location.href);
+
+        if(url.searchParams.get('class') == 'rogue') {
+            
+            buildTree(divTalentTreeWrapper, url);
+
+        }
+
+        
+
+}
+
+function createShaman () {    
+
+    if(document.getElementById('globalwrapper')) {
+
+        document.getElementById('globalwrapper').remove();
+
+        for(i = 0; i <= 35; i++){
+
+            if(shamanelemental[i].name !== undefined) {
+                shamanelemental[i].pointSpent = 0;
+            }
+
+            if(shamanenhancement[i].name !== undefined) {
+                shamanenhancement[i].pointSpent = 0;
+            }
+
+            if(shamanrestoration[i].name !== undefined) {
+                shamanrestoration[i].pointSpent = 0;
+            }
+            
+        }
+        globalTalentLimit = 0
+    }
+    
+    let divGlobalWrapper = document.createElement('div');
+        divGlobalWrapper.className = 'global-wrapper';
+        divGlobalWrapper.id = "globalwrapper"; 
+    
+    let divTalentTreeWrapper = document.createElement('div');
+        divTalentTreeWrapper.className = 'talent-tree-wrapper';
+        divTalentTreeWrapper.id = "treewrapper"; 
+
+
+
+     globalSpanPoints(divGlobalWrapper);
+     sharedLink( addClassToURL('shaman'), divGlobalWrapper);
+
+
+        talentTreeBuilder(shamanelemental, 
+                        'https://www.warcrafttavern.com/tbc/tools/talent-calculator/img/261.e7a6cc06.png', 
+                        'Elemental', 
+                        'https://wow.zamimg.com/images/wow/icons/large/spell_nature_lightning.jpg', divTalentTreeWrapper, 'A');
+
+        talentTreeBuilder(shamanenhancement, 
+                        'https://www.warcrafttavern.com/tbc/tools/talent-calculator/img/263.893b34eb.png', 
+                        'Enhancement', 
+                        'https://wow.zamimg.com/images/wow/icons/large/spell_shaman_improvedstormstrike.jpg', divTalentTreeWrapper, 'B');
+
+        talentTreeBuilder(shamanrestoration, 
+                        'https://www.warcrafttavern.com/tbc/tools/talent-calculator/img/262.48cc6bae.png', 
+                        'Restoration', 
+                        'https://wow.zamimg.com/images/wow/icons/large/spell_nature_magicimmunity.jpg', divTalentTreeWrapper, 'C');
+
+
+
+        divGlobalWrapper.appendChild(divTalentTreeWrapper);                
+        document.body.appendChild(divGlobalWrapper);
+
+        let url = new URL(window.location.href);
+
+        if(url.searchParams.get('class') == 'shaman') {
+            
+            buildTree(divTalentTreeWrapper, url);
+
+        }
+
+        
+
+}
+
+function createWarlock () {    
+
+    if(document.getElementById('globalwrapper')) {
+
+        document.getElementById('globalwrapper').remove();
+
+        for(i = 0; i <= 35; i++){
+
+            if(warlockaffliction[i].name !== undefined) {
+                warlockaffliction[i].pointSpent = 0;
+            }
+
+            if(warlockdemonology[i].name !== undefined) {
+                warlockdemonology[i].pointSpent = 0;
+            }
+
+            if(warlockdestruction[i].name !== undefined) {
+                warlockdestruction[i].pointSpent = 0;
+            }
+            
+        }
+        globalTalentLimit = 0
+    }
+    
+    let divGlobalWrapper = document.createElement('div');
+        divGlobalWrapper.className = 'global-wrapper';
+        divGlobalWrapper.id = "globalwrapper"; 
+    
+    let divTalentTreeWrapper = document.createElement('div');
+        divTalentTreeWrapper.className = 'talent-tree-wrapper';
+        divTalentTreeWrapper.id = "treewrapper"; 
+
+
+
+     globalSpanPoints(divGlobalWrapper);
+     sharedLink( addClassToURL('warlock'), divGlobalWrapper);
+
+
+        talentTreeBuilder(warlockaffliction, 
+                        'https://www.warcrafttavern.com/tbc/tools/talent-calculator/img/302.bc7b667f.png', 
+                        'Affliction', 
+                        'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_deathcoil.jpg', divTalentTreeWrapper, 'A');
+
+        talentTreeBuilder(warlockdemonology, 
+                        'https://www.warcrafttavern.com/tbc/tools/talent-calculator/img/303.17bca742.png', 
+                        'Demonology', 
+                        'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_metamorphosis.jpg', divTalentTreeWrapper, 'B');
+
+        talentTreeBuilder(warlockdestruction, 
+                        'https://www.warcrafttavern.com/tbc/tools/talent-calculator/img/301.e9ccb0ef.png', 
+                        'Destruction', 
+                        'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_rainoffire.jpg', divTalentTreeWrapper, 'C');
+
+
+
+        divGlobalWrapper.appendChild(divTalentTreeWrapper);                
+        document.body.appendChild(divGlobalWrapper);
+
+        let url = new URL(window.location.href);
+
+        if(url.searchParams.get('class') == 'warlock') {
+            
+            buildTree(divTalentTreeWrapper, url);
+
+        }
+
+        
+
+}
+
+function createWarrior () {    
+
+    if(document.getElementById('globalwrapper')) {
+
+        document.getElementById('globalwrapper').remove();
+
+        for(i = 0; i <= 35; i++){
+
+            if(warriorarms[i].name !== undefined) {
+                warriorarms[i].pointSpent = 0;
+            }
+
+            if(warriorfury[i].name !== undefined) {
+                warriorfury[i].pointSpent = 0;
+            }
+
+            if(warriorprotection[i].name !== undefined) {
+                warriorprotection[i].pointSpent = 0;
+            }
+            
+        }
+        globalTalentLimit = 0
+    }
+    
+    let divGlobalWrapper = document.createElement('div');
+        divGlobalWrapper.className = 'global-wrapper';
+        divGlobalWrapper.id = "globalwrapper"; 
+    
+    let divTalentTreeWrapper = document.createElement('div');
+        divTalentTreeWrapper.className = 'talent-tree-wrapper';
+        divTalentTreeWrapper.id = "treewrapper"; 
+
+
+
+     globalSpanPoints(divGlobalWrapper);
+     sharedLink( addClassToURL('warrior'), divGlobalWrapper);
+
+
+        talentTreeBuilder(warriorarms, 
+                        'https://www.warcrafttavern.com/tbc/tools/talent-calculator/img/161.20cf33cb.png', 
+                        'Arms', 
+                        'https://wow.zamimg.com/images/wow/icons/large/ability_warrior_savageblow.jpg', divTalentTreeWrapper, 'A');
+
+        talentTreeBuilder(warriorfury, 
+                        'https://www.warcrafttavern.com/tbc/tools/talent-calculator/img/164.cf26c558.png', 
+                        'Fury', 
+                        'https://wow.zamimg.com/images/wow/icons/large/ability_warrior_innerrage.jpg', divTalentTreeWrapper, 'B');
+
+        talentTreeBuilder(warriorprotection, 
+                        'https://www.warcrafttavern.com/tbc/tools/talent-calculator/img/163.c970f597.png', 
+                        'Protection', 
+                        'https://wow.zamimg.com/images/wow/icons/large/ability_warrior_defensivestance.jpg', divTalentTreeWrapper, 'C');
+
+
+
+        divGlobalWrapper.appendChild(divTalentTreeWrapper);                
+        document.body.appendChild(divGlobalWrapper);
+
+        let url = new URL(window.location.href);
+
+        if(url.searchParams.get('class') == 'warrior') {
+            
+            buildTree(divTalentTreeWrapper, url);
+
+        }
+
+        
+
+}
+
 
 function addClassToURL(classname) {
    

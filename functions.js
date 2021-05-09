@@ -207,6 +207,31 @@ function classIconNavBuilder (classicon) {
                     resetURL();
                     createMage();
                 }
+
+                if(spanHeader.textContent == 'Priest') {
+                    resetURL();
+                    createPriest();
+                }
+
+                if(spanHeader.textContent == 'Rogue') {
+                    resetURL();
+                    createRogue();
+                }
+
+                if(spanHeader.textContent == 'Shaman') {
+                    resetURL();
+                    createShaman();
+                }
+
+                if(spanHeader.textContent == 'Warlock') {
+                    resetURL();
+                    createWarlock();
+                }
+
+                if(spanHeader.textContent == 'Warrior') {
+                    resetURL();
+                    createWarrior();
+                }
                        
 
                }, false);
