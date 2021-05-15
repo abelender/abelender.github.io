@@ -1,10 +1,40 @@
 let warlockdemonology = [
 
     {   
-        name: undefined,
-        src: undefined,
-        pointSpent: undefined,
-        pointLimit: undefined,
+        name: "Improved Healthstone",
+        src: 'https://wow.zamimg.com/images/wow/icons/large/inv_stone_04.jpg',
+        pointSpent: 0,
+        pointLimit: 2,
+        isEnable: true,
+        lineNumber: 1,
+        rankText: {
+
+        },
+        isTalent: false,
+        addRequirement: function() { return ""}
+        
+    },
+
+    {   
+        name: "Improved Imp",
+        src: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_summonimp.jpg',
+        pointSpent: 0,
+        pointLimit: 3,
+        isEnable: true,
+        lineNumber: 1,
+        rankText: {
+
+        },
+        isTalent: false,
+        addRequirement: function() { return ""}
+        
+    },
+
+    {   
+        name: "Demonic Embrace",
+        src: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_metamorphosis.jpg',
+        pointSpent: 0,
+        pointLimit: 5,
         isEnable: true,
         lineNumber: 1,
         rankText: {
@@ -18,7 +48,7 @@ let warlockdemonology = [
     {   
         name: undefined,
         src: undefined,
-        pointSpent: undefined,
+        pointSpent: 0,
         pointLimit: undefined,
         isEnable: true,
         lineNumber: 1,
@@ -31,12 +61,12 @@ let warlockdemonology = [
     },
 
     {   
-        name: undefined,
-        src: undefined,
-        pointSpent: undefined,
-        pointLimit: undefined,
-        isEnable: true,
-        lineNumber: 1,
+        name: "Improved Health Funnel",
+        src: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_lifedrain.jpg',
+        pointSpent: 0,
+        pointLimit: 2,
+        isEnable: false,
+        lineNumber: 2,
         rankText: {
 
         },
@@ -46,12 +76,12 @@ let warlockdemonology = [
     },
 
     {   
-        name: undefined,
-        src: undefined,
-        pointSpent: undefined,
-        pointLimit: undefined,
-        isEnable: true,
-        lineNumber: 1,
+        name: "Improved Voidwalker",
+        src: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_summonvoidwalker.jpg',
+        pointSpent: 0,
+        pointLimit: 3,
+        isEnable: false,
+        lineNumber: 2,
         rankText: {
 
         },
@@ -61,10 +91,10 @@ let warlockdemonology = [
     },
 
     {   
-        name: undefined,
-        src: undefined,
-        pointSpent: undefined,
-        pointLimit: undefined,
+        name: "Fel Intellect",
+        src: 'https://wow.zamimg.com/images/wow/icons/large/spell_holy_magicalsentry.jpg',
+        pointSpent: 0,
+        pointLimit: 3,
         isEnable: false,
         lineNumber: 2,
         rankText: {
@@ -78,7 +108,7 @@ let warlockdemonology = [
     {   
         name: undefined,
         src: undefined,
-        pointSpent: undefined,
+        pointSpent: 0,
         pointLimit: undefined,
         isEnable: false,
         lineNumber: 2,
@@ -91,12 +121,12 @@ let warlockdemonology = [
     },
 
     {   
-        name: undefined,
-        src: undefined,
-        pointSpent: undefined,
-        pointLimit: undefined,
+        name: "Improved Succubus",
+        src: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_summonsuccubus.jpg',
+        pointSpent: 0,
+        pointLimit: 3,
         isEnable: false,
-        lineNumber: 2,
+        lineNumber: 3,
         rankText: {
 
         },
@@ -106,12 +136,12 @@ let warlockdemonology = [
     },
 
     {   
-        name: undefined,
-        src: undefined,
-        pointSpent: undefined,
-        pointLimit: undefined,
+        name: "Fel Domination",
+        src: 'https://wow.zamimg.com/images/wow/icons/large/spell_nature_removecurse.jpg',
+        pointSpent: 0,
+        pointLimit: 1,
         isEnable: false,
-        lineNumber: 2,
+        lineNumber: 3,
         rankText: {
 
         },
@@ -121,10 +151,25 @@ let warlockdemonology = [
     },
 
     {   
-        name: undefined,
-        src: undefined,
-        pointSpent: undefined,
-        pointLimit: undefined,
+        name: "Fel Stamina",
+        src: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_antishadow.jpg',
+        pointSpent: 0,
+        pointLimit: 3,
+        isEnable: false,
+        lineNumber: 3,
+        rankText: {
+
+        },
+        isTalent: false,
+        addRequirement: function() { return ""}
+        
+    },
+
+    {   
+        name: "Demonic Aegis",
+        src: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_ragingscream.jpg',
+        pointSpent: 0,
+        pointLimit: 3,
         isEnable: false,
         lineNumber: 3,
         rankText: {
@@ -138,10 +183,10 @@ let warlockdemonology = [
     {   
         name: undefined,
         src: undefined,
-        pointSpent: undefined,
+        pointSpent: 0,
         pointLimit: undefined,
         isEnable: false,
-        lineNumber: 3,
+        lineNumber: 4,
         rankText: {
 
         },
@@ -151,12 +196,12 @@ let warlockdemonology = [
     },
 
     {   
-        name: undefined,
-        src: undefined,
-        pointSpent: undefined,
-        pointLimit: undefined,
+        name: "Master Summoner",
+        src: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_impphaseshift.jpg',
+        pointSpent: 0,
+        pointLimit: 2,
         isEnable: false,
-        lineNumber: 3,
+        lineNumber: 4,
         rankText: {
 
         },
@@ -166,25 +211,10 @@ let warlockdemonology = [
     },
 
     {   
-        name: undefined,
-        src: undefined,
-        pointSpent: undefined,
-        pointLimit: undefined,
-        isEnable: false,
-        lineNumber: 3,
-        rankText: {
-
-        },
-        isTalent: false,
-        addRequirement: function() { return ""}
-        
-    },
-
-    {   
-        name: undefined,
-        src: undefined,
-        pointSpent: undefined,
-        pointLimit: undefined,
+        name: "Unholy Power",
+        src: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowworddominate.jpg',
+        pointSpent: 0,
+        pointLimit: 5,
         isEnable: false,
         lineNumber: 4,
         rankText: {
@@ -198,7 +228,7 @@ let warlockdemonology = [
     {   
         name: undefined,
         src: undefined,
-        pointSpent: undefined,
+        pointSpent: 0,
         pointLimit: undefined,
         isEnable: false,
         lineNumber: 4,
@@ -211,12 +241,12 @@ let warlockdemonology = [
     },
 
     {   
-        name: undefined,
-        src: undefined,
-        pointSpent: undefined,
-        pointLimit: undefined,
+        name: "Improved Slave Demon",
+        src: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_enslavedemon.jpg',
+        pointSpent: 0,
+        pointLimit: 2,
         isEnable: false,
-        lineNumber: 4,
+        lineNumber: 5,
         rankText: {
 
         },
@@ -226,25 +256,10 @@ let warlockdemonology = [
     },
 
     {   
-        name: undefined,
-        src: undefined,
-        pointSpent: undefined,
-        pointLimit: undefined,
-        isEnable: false,
-        lineNumber: 4,
-        rankText: {
-
-        },
-        isTalent: false,
-        addRequirement: function() { return ""}
-        
-    },
-
-    {   
-        name: undefined,
-        src: undefined,
-        pointSpent: undefined,
-        pointLimit: undefined,
+        name: "Demonic Sacrifice",
+        src: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_psychicscream.jpg',
+        pointSpent: 0,
+        pointLimit: 1,
         isEnable: false,
         lineNumber: 5,
         rankText: {
@@ -258,7 +273,7 @@ let warlockdemonology = [
     {   
         name: undefined,
         src: undefined,
-        pointSpent: undefined,
+        pointSpent: 0,
         pointLimit: undefined,
         isEnable: false,
         lineNumber: 5,
@@ -271,10 +286,10 @@ let warlockdemonology = [
     },
 
     {   
-        name: undefined,
-        src: undefined,
-        pointSpent: undefined,
-        pointLimit: undefined,
+        name: "Master Conjuror",
+        src: 'https://wow.zamimg.com/images/wow/icons/large/inv_ammo_firetar.jpg',
+        pointSpent: 0,
+        pointLimit: 2,
         isEnable: false,
         lineNumber: 5,
         rankText: {
@@ -286,25 +301,10 @@ let warlockdemonology = [
     },
 
     {   
-        name: undefined,
-        src: undefined,
-        pointSpent: undefined,
-        pointLimit: undefined,
-        isEnable: false,
-        lineNumber: 5,
-        rankText: {
-
-        },
-        isTalent: false,
-        addRequirement: function() { return ""}
-        
-    },
-
-    {   
-        name: undefined,
-        src: undefined,
-        pointSpent: undefined,
-        pointLimit: undefined,
+        name: "Mana Feed",
+        src: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_manafeed.jpg',
+        pointSpent: 0,
+        pointLimit: 3,
         isEnable: false,
         lineNumber: 6,
         rankText: {
@@ -318,8 +318,23 @@ let warlockdemonology = [
     {   
         name: undefined,
         src: undefined,
-        pointSpent: undefined,
+        pointSpent: 0,
         pointLimit: undefined,
+        isEnable: false,
+        lineNumber: 6,
+        rankText: {
+
+        },
+        isTalent: false,
+        addRequirement: function() { return ""}
+        
+    },
+
+    {   
+        name: "Master Demonologist",
+        src: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_shadowpact.jpg',
+        pointSpent: 0,
+        pointLimit: 5,
         isEnable: false,
         lineNumber: 6,
         rankText: {
@@ -333,7 +348,7 @@ let warlockdemonology = [
     {   
         name: undefined,
         src: undefined,
-        pointSpent: undefined,
+        pointSpent: 0,
         pointLimit: undefined,
         isEnable: false,
         lineNumber: 6,
@@ -346,12 +361,42 @@ let warlockdemonology = [
     },
 
     {   
-        name: undefined,
-        src: undefined,
-        pointSpent: undefined,
-        pointLimit: undefined,
+        name: "Demonic Resilience",
+        src: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_demonicfortitude.jpg',
+        pointSpent: 0,
+        pointLimit: 3,
         isEnable: false,
-        lineNumber: 6,
+        lineNumber: 7,
+        rankText: {
+
+        },
+        isTalent: false,
+        addRequirement: function() { return ""}
+        
+    },
+
+    {   
+        name: "Soul Link",
+        src: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_gathershadows.jpg',
+        pointSpent: 0,
+        pointLimit: 1,
+        isEnable: false,
+        lineNumber: 7,
+        rankText: {
+
+        },
+        isTalent: false,
+        addRequirement: function() { return ""}
+        
+    },
+
+    {   
+        name: "Demonic Knowledge",
+        src: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_improvedvampiricembrace.jpg',
+        pointSpent: 0,
+        pointLimit: 3,
+        isEnable: false,
+        lineNumber: 7,
         rankText: {
 
         },
@@ -363,7 +408,7 @@ let warlockdemonology = [
     {   
         name: undefined,
         src: undefined,
-        pointSpent: undefined,
+        pointSpent: 0,
         pointLimit: undefined,
         isEnable: false,
         lineNumber: 7,
@@ -378,10 +423,25 @@ let warlockdemonology = [
     {   
         name: undefined,
         src: undefined,
-        pointSpent: undefined,
+        pointSpent: 0,
         pointLimit: undefined,
         isEnable: false,
-        lineNumber: 7,
+        lineNumber: 8,
+        rankText: {
+
+        },
+        isTalent: false,
+        addRequirement: function() { return ""}
+        
+    },
+
+    {   
+        name: "Demonic Tactics",
+        src: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_demonictactics.jpg',
+        pointSpent: 0,
+        pointLimit: 5,
+        isEnable: false,
+        lineNumber: 8,
         rankText: {
 
         },
@@ -393,37 +453,7 @@ let warlockdemonology = [
     {   
         name: undefined,
         src: undefined,
-        pointSpent: undefined,
-        pointLimit: undefined,
-        isEnable: false,
-        lineNumber: 7,
-        rankText: {
-
-        },
-        isTalent: false,
-        addRequirement: function() { return ""}
-        
-    },
-
-    {   
-        name: undefined,
-        src: undefined,
-        pointSpent: undefined,
-        pointLimit: undefined,
-        isEnable: false,
-        lineNumber: 7,
-        rankText: {
-
-        },
-        isTalent: false,
-        addRequirement: function() { return ""}
-        
-    },
-
-    {   
-        name: undefined,
-        src: undefined,
-        pointSpent: undefined,
+        pointSpent: 0,
         pointLimit: undefined,
         isEnable: false,
         lineNumber: 8,
@@ -438,7 +468,7 @@ let warlockdemonology = [
     {   
         name: undefined,
         src: undefined,
-        pointSpent: undefined,
+        pointSpent: 0,
         pointLimit: undefined,
         isEnable: false,
         lineNumber: 8,
@@ -453,10 +483,25 @@ let warlockdemonology = [
     {   
         name: undefined,
         src: undefined,
-        pointSpent: undefined,
+        pointSpent: 0,
         pointLimit: undefined,
         isEnable: false,
-        lineNumber: 8,
+        lineNumber: 9,
+        rankText: {
+
+        },
+        isTalent: false,
+        addRequirement: function() { return ""}
+        
+    },
+
+    {   
+        name: "Summon Felguard",
+        src: 'https://wow.zamimg.com/images/wow/icons/large/spell_shadow_summonfelguard.jpg',
+        pointSpent: 0,
+        pointLimit: 1,
+        isEnable: false,
+        lineNumber: 9,
         rankText: {
 
         },
@@ -468,22 +513,7 @@ let warlockdemonology = [
     {   
         name: undefined,
         src: undefined,
-        pointSpent: undefined,
-        pointLimit: undefined,
-        isEnable: false,
-        lineNumber: 8,
-        rankText: {
-
-        },
-        isTalent: false,
-        addRequirement: function() { return ""}
-        
-    },
-
-    {   
-        name: undefined,
-        src: undefined,
-        pointSpent: undefined,
+        pointSpent: 0,
         pointLimit: undefined,
         isEnable: false,
         lineNumber: 9,
@@ -498,37 +528,7 @@ let warlockdemonology = [
     {   
         name: undefined,
         src: undefined,
-        pointSpent: undefined,
-        pointLimit: undefined,
-        isEnable: false,
-        lineNumber: 9,
-        rankText: {
-
-        },
-        isTalent: false,
-        addRequirement: function() { return ""}
-        
-    },
-
-    {   
-        name: undefined,
-        src: undefined,
-        pointSpent: undefined,
-        pointLimit: undefined,
-        isEnable: false,
-        lineNumber: 9,
-        rankText: {
-
-        },
-        isTalent: false,
-        addRequirement: function() { return ""}
-        
-    },
-
-    {   
-        name: undefined,
-        src: undefined,
-        pointSpent: undefined,
+        pointSpent: 0,
         pointLimit: undefined,
         isEnable: false,
         lineNumber: 9,
