@@ -12,6 +12,43 @@ if(url.searchParams.get('class') == 'druid') {
     createDruid();
 }
 
+if(url.searchParams.get('class') == 'hunter') {
+    
+    createHunter();
+}
+
+if(url.searchParams.get('class') == 'mage') {
+    
+    createMage();
+}
+
+if(url.searchParams.get('class') == 'priest') {
+    
+    createPriest();
+}
+
+if(url.searchParams.get('class') == 'rogue') {
+    
+    createRogue();
+}
+
+if(url.searchParams.get('class') == 'shaman') {
+    
+    createShaman();
+}
+
+if(url.searchParams.get('class') == 'warlock') {
+    
+    createWarlock();
+}
+
+if(url.searchParams.get('class') == 'warrior') {
+    
+    createWarrior();
+}
+
+
+
 
 
 function createPaladin () {    
