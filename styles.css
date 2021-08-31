@@ -4,6 +4,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+@media (max-width:320px)  { 
+    /* smartphones, iPhone, portrait 480x320 phones */ 
+
+    .talent-tree-wrapper {
+        display: flex;
+        flex-flow: column;
+    }
+
+    
+}
+
+@media (max-width:481px)  { 
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
+
+    .talent-tree-wrapper {
+        display: flex;
+        flex-flow: column;
+        
+    }
+
+    .talent-tree {
+        background-color: yellow;
+        
+    }
+}
+
+@media (min-width:641px)  { 
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+
+    .talent-tree-wrapper {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+}
+
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+
 body {
     display: flex;
     flex-direction: column;
@@ -21,12 +62,13 @@ body {
 .class-icon-wrapper{
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 .class-icon {
     display: flex;
     flex-direction: column;
-
+    width: 11.11%;
     margin: 10px;
 }
 
@@ -91,7 +133,7 @@ body {
 
 .talent-tree-wrapper {
     display: flex;
-    flex-direction: row;
+    flex-flow: row;
 }
 
 .talent-tree-header {
