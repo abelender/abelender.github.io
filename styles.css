@@ -12,7 +12,18 @@
         flex-flow: column;
     }
 
+    .class-icon-wrapper{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
     
+    .class-icon {
+        display: flex;
+        flex-direction: column;
+        width: 11.11%;
+        margin: 10px;
+    }
 }
 
 @media (max-width:481px)  { 
