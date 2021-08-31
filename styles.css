@@ -6,49 +6,33 @@
 
 @media (max-width:320px)  { 
     /* smartphones, iPhone, portrait 480x320 phones */ 
-
     .talent-tree-wrapper {
         display: flex;
-        flex-flow: column;
-    }
-
-    .class-icon-wrapper{
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-    }
-    
-    .class-icon {
-        display: flex;
         flex-direction: column;
-        width: 11.11%;
-        margin: 10px;
+        flex-wrap: wrap;
     }
+   
 }
 
 @media (max-width:481px)  { 
     /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
-
     .talent-tree-wrapper {
         display: flex;
-        flex-flow: column;
-        
-    }
+        flex-direction: column;
+        flex-wrap: wrap;
 
-    .talent-tree {
-        background-color: yellow;
-        
     }
 }
 
 @media (min-width:641px)  { 
     /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
-
     .talent-tree-wrapper {
         display: flex;
         flex-direction: column;
-        
+        flex-wrap: wrap;
+
     }
+   
 
 }
 
@@ -73,13 +57,19 @@ body {
 .class-icon-wrapper{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    flex-wrap: wrap;
+    /* width: 100%;
+
+    display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1; */
 }
 
 .class-icon {
     display: flex;
     flex-direction: column;
-    width: 11.11%;
+    /* width: 11.11%; */
     margin: 10px;
 }
 
@@ -144,7 +134,7 @@ body {
 
 .talent-tree-wrapper {
     display: flex;
-    flex-flow: row;
+    flex-direction: row;
 }
 
 .talent-tree-header {
@@ -357,3 +347,18 @@ body {
     margin-top: 7px;
     font-weight: normal;
 }
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
+  
